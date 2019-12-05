@@ -11,3 +11,108 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/*Fractions*/
+.fraction {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.2em 0.4ex;
+  text-align: center;
+}
+
+.fraction > span {
+  display: block;
+  padding-top: 0.15em;
+}
+
+.fraction span.denominator {
+  border-top: thin solid black;
+}
+
+.fraction span.bar {
+  display: none;
+}
+/*End of Fractions*/
+
+/*Integrals*/
+.integ {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.integ > span {
+  display: block;
+  font-size: 70%;
+}
+
+.integ .top-limit {
+  margin-bottom: -0.1ex;
+}
+
+.integ .bottom-limit {
+  margin-top: -0.5ex;
+}
+
+.integ .symbol {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+/*End of Integrals*/
+
+/*Radicals*/
+.radical {
+  position: relative;
+  font-size: 1.6em;
+  vertical-align: middle;
+}
+.n-root {
+  position: absolute;
+  top: -0.333em;
+  left: 0.333em;
+  font-size: 45%;
+}
+.radicand {
+  padding: 0.25em 0.25em;
+  border-top: thin black solid;
+}
+/*End of Radicals*/
+
+/*Limits*/
+.limes {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.2em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.limes > span {
+  display: block;
+  margin: -0.5ex auto;
+}
+
+.limes span.numup,
+.limes span.overdn {
+  font-size: 60%;
+}
+/*End of Limits*/
+
+.subscript {
+  position: relative;
+  top: 0.4em;
+  right: 0.3em;
+  font-size: 75%;
+}
+
+.exponent {
+  position: relative;
+  top: -0.8em;
+  right: 0.3em;
+  font-size: 75%;
+}
+.exponent .element2 {
+  position: relative;
+  right: 0.2em;
+}
