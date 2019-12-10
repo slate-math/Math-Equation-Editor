@@ -1,59 +1,33 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { Editor } from "slate-react";
-import { Value } from "slate";
-import AutoReplace from "./plugin/AutoComplete.js";
+import { createEditor } from "slate";
+import { useMemo, useState } from "react";
+import { Slate, Editable, withReact } from "slate-react";
 
-const initialValue = Value.fromJSON({
-  document: {
-    nodes: [
-      {
-        object: "block",
-        type: "paragraph",
-        nodes: [
-          {
-            object: "text",
-            text: "Enter equation."
-          }
-        ]
-      }
-    ]
-  }
-});
+const App = () => {
+  const editor = useMemo(() => withReact(createEditor()), []);
+  const [selection, setSelection] = useState(null);
+  // Add the initial value when setting up our state.
+  const [value, setValue] = useState([
+    {
+      type: "paragraph",
+      children: [{ text: "A line of text in a paragraph." }]
+    }
+  ]);
 
-const replace = AutoReplace({
-  trigger: "space",
-  before: /(\\frac)/,
-  change: (change, e, matches) => {
-    return change.setBlocks({ type: "quote" });
-  }
-});
-
-const plugins = [replace];
-
-// Define our app...
-class App extends React.Component {
-  // Set the initial value when the app is first constructed.
-  state = {
-    value: initialValue
-  };
-
-  // On change, update the app's React state with the new editor value.
-  onChange = ({ value }) => {
-    this.setState({ value });
-  };
-
-  // Render the editor.
-  render() {
-    return (
-      <Editor
-        plugins={plugins}
-        value={this.state.value}
-        onChange={this.onChange}
-      />
-    );
-  }
-}
+  return (
+    <Slate
+      editor={editor}
+      value={value}
+      selection={selection}
+      onChange={(value, selection) => {
+        setValue(value);
+        setSelection(selection);
+      }}
+    >
+      <Editable />
+    </Slate>
+  );
+};
 
 export default App;
