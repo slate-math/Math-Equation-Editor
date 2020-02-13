@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import Math from "./MathDisplay";
 import * as serviceWorker from "./serviceWorker";
+import InputBox from "./Fraction";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

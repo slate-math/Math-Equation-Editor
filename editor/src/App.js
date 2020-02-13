@@ -4,6 +4,8 @@ import "./App.css";
 import { Editor, Range, createEditor } from "slate";
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
 import { Portal } from "./Portal";
+import Fraction from "./Fraction";
+import InputBox from "./Fraction";
 import {
   Slate,
   Editable,
@@ -164,8 +166,7 @@ const withAutoFill = editor => {
     if (command.type === "insert_mention") {
       const mention = {
         type: "mention",
-        character: command.character,
-        children: [{ text: "" }]
+        children: [{ text: "", mention: '' }]
       };
 
       Editor.insertNodes(editor, mention);
@@ -182,26 +183,10 @@ const Element = props => {
   const { attributes, children, element } = props;
   switch (element.type) {
     case "mention":
-      return <Fraction {...props} />;
+      return <InputBox {...attributes} {...props} />;
     default:
       return <p {...attributes}>{children}</p>;
   }
-};
-
-const Fraction = ({ attributes, children, element }) => {
-  return (
-    <>
-      <span class="fraction" contentEditable={true}>
-        <span class="numerator">
-          <span>5</span>
-        </span>
-        <span class="bar">/</span>
-        <span class="denominator">
-          <span>8</span>
-        </span>
-      </span>
-    </>
-  );
 };
 
 export default App;

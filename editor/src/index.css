@@ -12,7 +12,19 @@ code {
     monospace;
 }
 
+.inputContainer {
+  border: dashed 1px black;
+  padding: 5px 10px;
+  width: 1px;
+}
+
 /*Fractions*/
+.fraction2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.2em 0.4ex;
+  text-align: center;
+}
 .fraction {
   display: inline-block;
   vertical-align: middle;
