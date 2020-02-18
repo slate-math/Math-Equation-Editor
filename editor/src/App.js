@@ -4,10 +4,9 @@ import "./App.css";
 import { Editor, Transforms, Range, createEditor } from "slate";
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
 import { Portal } from "./Portal";
-import Fraction from "./Fraction";
-import InputBox from "./Fraction";
 import { Slate, Editable, withReact, ReactEditor } from "slate-react";
 
+// This is what's shown when editor is first displayed
 const initialValue = [
   {
     children: [
@@ -18,9 +17,11 @@ const initialValue = [
   }
 ];
 
+// The different choices available in the drop-down box
 const EQUATIONS = ["frac{1}{2}", "int_{a}^{b}", "integer", "lim_{lower}"];
 
 const App = () => {
+  // A bunch of stuff needed for the Slate Editor
   const ref = useRef();
   const editor = useMemo(() => withAutoFill(withReact(createEditor())), []);
   const [target, setTarget] = useState();
@@ -33,6 +34,7 @@ const App = () => {
     c.toLowerCase().startsWith(search.toLowerCase())
   ).slice(0, 10);
 
+  // Custom hotkeys for our editor
   const onKeyDown = useCallback(
     event => {
       if (target) {
@@ -64,6 +66,7 @@ const App = () => {
     [index, search, target]
   );
 
+  // The structure of the dropdown
   useEffect(() => {
     if (target && chars.length > 0) {
       const el = ref.current;
@@ -82,6 +85,7 @@ const App = () => {
         setValue(value);
         const { selection } = editor;
 
+        // When our intellisense hotkey is pressed (forwardslash - \), all proceeding text is used for the dropdown prompt
         if (selection && Range.isCollapsed(selection)) {
           const [start] = Range.edges(selection);
           const wordBefore = Editor.before(editor, start, { unit: "word" });
@@ -108,9 +112,10 @@ const App = () => {
       <Editable
         renderElement={renderElement}
         onKeyDown={onKeyDown}
-        placeholder="Enter equation"
+        placeholder="Enter equation" // If there's no text on the screen, display this
       />
       {target && chars.length > 0 && (
+        // Not entirely sure what this is. I think it's more styling for the dropdown
         <Portal>
           <div
             ref={ref}
@@ -144,6 +149,7 @@ const App = () => {
   );
 };
 
+// Not sure. Leaving this part alone is recommended.
 const withAutoFill = editor => {
   const { isInline, isVoid } = editor;
   editor.isInline = element => {
@@ -155,6 +161,8 @@ const withAutoFill = editor => {
   return editor;
 };
 
+//--------------------------ToDo--------------------------
+//step 1 -- create slate node (a.k.a Slate DOM)
 const insertEquation = editor => {
   const fraction = {
     type: "table",
@@ -164,7 +172,7 @@ const insertEquation = editor => {
         children: [
           {
             type: "table-cell",
-            children: [{ text: "1" }]
+            children: [{ text: "2" }]
           }
         ]
       },
@@ -173,7 +181,7 @@ const insertEquation = editor => {
         children: [
           {
             type: "table-cell",
-            children: [{ text: "2" }]
+            children: [{ text: "9" }]
           }
         ]
       }
@@ -184,9 +192,11 @@ const insertEquation = editor => {
 };
 
 const Element = ({ attributes, children, element }) => {
+  // Step 2 -- Find the custom node you created
   switch (element.type) {
     case "table":
       return (
+        //step 3 -- Create custom Component for custom node
         <span>
           <table>
             <tbody {...attributes}>{children}</tbody>
