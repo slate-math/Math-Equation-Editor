@@ -17,12 +17,11 @@ class InputBox extends React.Component {
 
   render() {
     return (
-      <input
+      <div>
         id={this.props.name}
-        className="inputContainer"
-        type="text"
-        onChange={input => this.handleChange(input.target)}
-      />
+        className="inputContainer" type="text" onChange=
+        {input => this.handleChange(input.target)}
+      </div>
     );
   }
 }

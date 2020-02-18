@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./App.css";
-import { Editor, Range, createEditor } from "slate";
+import { Editor, Transforms, Range, createEditor } from "slate";
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
 import { Portal } from "./Portal";
 import Fraction from "./Fraction";
@@ -30,7 +30,6 @@ const EQUATIONS = ["frac{1}{2}", "int_{a}^{b}", "integer", "lim_{lower}"];
 const App = () => {
   const ref = useRef();
   const editor = useMemo(() => withAutoFill(withReact(createEditor())), []);
-  const [selection, setSelection] = useState(null);
   const [target, setTarget] = useState();
   const [index, setIndex] = useState(0);
   const [search, setSearch] = useState("");
@@ -58,8 +57,8 @@ const App = () => {
           case "Tab":
           case "Enter":
             event.preventDefault();
-            Editor.select(editor, target);
-            editor.exec({ type: "insert_mention", character: chars[index] });
+            Transforms.select(editor, target);
+            insertMention(editor, chars[index]);
             setTarget(null);
             break;
           case "Escape":
@@ -86,21 +85,20 @@ const App = () => {
     <Slate
       editor={editor}
       value={value}
-      selection={selection}
-      onChange={(value, selection) => {
+      onChange={value => {
         setValue(value);
-        setSelection(selection);
+        const { selection } = editor;
 
         if (selection && Range.isCollapsed(selection)) {
           const [start] = Range.edges(selection);
           const wordBefore = Editor.before(editor, start, { unit: "word" });
           const before = wordBefore && Editor.before(editor, wordBefore);
           const beforeRange = before && Editor.range(editor, before, start);
-          const beforeText = beforeRange && Editor.text(editor, beforeRange);
+          const beforeText = beforeRange && Editor.string(editor, beforeRange);
           const beforeMatch = beforeText && beforeText.match(/^\\(\w+)$/);
           const after = Editor.after(editor, start);
           const afterRange = Editor.range(editor, start, after);
-          const afterText = Editor.text(editor, afterRange);
+          const afterText = Editor.string(editor, afterRange);
           const afterMatch = afterText.match(/^(\s|$)/);
 
           if (beforeMatch && afterMatch) {
@@ -154,36 +152,27 @@ const App = () => {
 };
 
 const withAutoFill = editor => {
-  const { exec, isInline, isVoid } = editor;
+  const { isInline, isVoid } = editor;
   editor.isInline = element => {
     return element.type === "mention" ? true : isInline(element);
   };
   editor.isVoid = element => {
     return element.type === "mention" ? true : isVoid(element);
   };
-
-  editor.exec = command => {
-    if (command.type === "insert_mention") {
-      const mention = {
-        type: "mention",
-        children: [{ text: "", mention: '' }]
-      };
-
-      Editor.insertNodes(editor, mention);
-      Editor.move(editor);
-    } else {
-      exec(command);
-    }
-  };
-
   return editor;
+};
+
+const insertMention = (editor, character) => {
+  const mention = { type: "mention", character, children: [{ text: "" }] };
+  Transforms.insertNodes(editor, mention);
+  Transforms.move(editor);
 };
 
 const Element = props => {
   const { attributes, children, element } = props;
   switch (element.type) {
     case "mention":
-      return <InputBox {...attributes} {...props} />;
+      return <Fraction {...attributes} {...props} />;
     default:
       return <p {...attributes}>{children}</p>;
   }

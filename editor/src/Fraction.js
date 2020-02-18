@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import InputBox from "./InputBox";
 
+const Math = props => {
+  return <span {...props}>{props.children}</span>;
+};
+
 class Fraction extends Component {
   constructor(props) {
     super(props);
@@ -16,10 +20,10 @@ class Fraction extends Component {
 
   render() {
     return (
-      <span  className="fraction2">
-        <InputBox handleChange={this.handleChange} name="numerator" />
+      <span {...this.props.attributes} className="fraction2">
+        <Math name="numerator" />
         <hr></hr>
-        <InputBox handleChange={this.handleChange} name="denominator" />
+        <Math name="denominator" />
       </span>
     );
   }
