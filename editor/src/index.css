@@ -6,6 +6,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+span .table {
+  display: inline-table;
+}
+
+td {
+  text-align: center;
+}
+
+tr {
+  text-align: center;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

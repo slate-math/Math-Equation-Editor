@@ -6,14 +6,7 @@ import { useMemo, useState, useCallback, useRef, useEffect } from "react";
 import { Portal } from "./Portal";
 import Fraction from "./Fraction";
 import InputBox from "./Fraction";
-import {
-  Slate,
-  Editable,
-  withReact,
-  ReactEditor,
-  useSelected,
-  useFocused
-} from "slate-react";
+import { Slate, Editable, withReact, ReactEditor } from "slate-react";
 
 const initialValue = [
   {
@@ -58,7 +51,7 @@ const App = () => {
           case "Enter":
             event.preventDefault();
             Transforms.select(editor, target);
-            insertMention(editor, chars[index]);
+            insertEquation(editor, chars[index]);
             setTarget(null);
             break;
           case "Escape":
@@ -154,25 +147,56 @@ const App = () => {
 const withAutoFill = editor => {
   const { isInline, isVoid } = editor;
   editor.isInline = element => {
-    return element.type === "mention" ? true : isInline(element);
+    return element.type === "fraction" ? false : isInline(element);
   };
   editor.isVoid = element => {
-    return element.type === "mention" ? true : isVoid(element);
+    return element.type === "fraction" ? true : isVoid(element);
   };
   return editor;
 };
 
-const insertMention = (editor, character) => {
-  const mention = { type: "mention", character, children: [{ text: "" }] };
-  Transforms.insertNodes(editor, mention);
+const insertEquation = editor => {
+  const fraction = {
+    type: "table",
+    children: [
+      {
+        type: "table-row",
+        children: [
+          {
+            type: "table-cell",
+            children: [{ text: "1" }]
+          }
+        ]
+      },
+      {
+        type: "table-row",
+        children: [
+          {
+            type: "table-cell",
+            children: [{ text: "2" }]
+          }
+        ]
+      }
+    ]
+  };
+  Transforms.insertNodes(editor, fraction);
   Transforms.move(editor);
 };
 
-const Element = props => {
-  const { attributes, children, element } = props;
+const Element = ({ attributes, children, element }) => {
   switch (element.type) {
-    case "mention":
-      return <Fraction {...attributes} {...props} />;
+    case "table":
+      return (
+        <span>
+          <table>
+            <tbody {...attributes}>{children}</tbody>
+          </table>
+        </span>
+      );
+    case "table-row":
+      return <tr {...attributes}>{children}</tr>;
+    case "table-cell":
+      return <td {...attributes}>{children}</td>;
     default:
       return <p {...attributes}>{children}</p>;
   }

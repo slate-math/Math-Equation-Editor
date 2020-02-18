@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import InputBox from "./InputBox";
 
 const Math = props => {
   return <span {...props}>{props.children}</span>;
