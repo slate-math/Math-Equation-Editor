@@ -149,11 +149,11 @@ const App = () => {
   );
 };
 
-// Not sure. Leaving this part alone is recommended.
+// Not sure what to do with this. Will figure it out later
 const withAutoFill = editor => {
   const { isInline, isVoid } = editor;
   editor.isInline = element => {
-    return element.type === "fraction" ? false : isInline(element);
+    return element.type === "fraction" ? true : isInline(element);
   };
   editor.isVoid = element => {
     return element.type === "fraction" ? true : isVoid(element);
@@ -165,22 +165,22 @@ const withAutoFill = editor => {
 //step 1 -- create slate node (a.k.a Slate DOM)
 const insertEquation = editor => {
   const fraction = {
-    type: "table",
+    type: "math",
     children: [
       {
-        type: "table-row",
+        type: "numerator",
         children: [
           {
-            type: "table-cell",
+            type: "input",
             children: [{ text: "2" }]
           }
         ]
       },
       {
-        type: "table-row",
+        type: "denominator",
         children: [
           {
-            type: "table-cell",
+            type: "input",
             children: [{ text: "9" }]
           }
         ]
@@ -192,23 +192,28 @@ const insertEquation = editor => {
 };
 
 const Element = ({ attributes, children, element }) => {
-  // Step 2 -- Find the custom node you created
+  // Step 2 -- This returns the HTML representation of each node. We want to turn this into a React component in a separate file
   switch (element.type) {
-    case "table":
+    case "math":
       return (
-        //step 3 -- Create custom Component for custom node
-        <span>
-          <table>
-            <tbody {...attributes}>{children}</tbody>
-          </table>
+        <span className="fraction" {...attributes}>
+          {children}
         </span>
       );
-    case "table-row":
-      return <tr {...attributes}>{children}</tr>;
-    case "table-cell":
-      return <td {...attributes}>{children}</td>;
+    case "numerator":
+      return (
+        <span className="numerator" {...attributes}>
+          {children}
+        </span>
+      );
+    case "denominator":
+      return (
+        <span className="denominator" {...attributes}>
+          {children}
+        </span>
+      );
     default:
-      return <p {...attributes}>{children}</p>;
+      return <span {...attributes}>{children}</span>;
   }
 };
 
