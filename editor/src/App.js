@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./App.css";
 import { Editor, Transforms, Range, createEditor } from "slate";
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
@@ -192,7 +191,7 @@ const insertEquation = editor => {
 };
 
 const Element = ({ attributes, children, element }) => {
-  // Step 2 -- This returns the HTML representation of each node. We want to turn this into a React component in a separate file
+  // Step 2 -- Add HTML elements so the Slate DOM can render
   switch (element.type) {
     case "math":
       return (
