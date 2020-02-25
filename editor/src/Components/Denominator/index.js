@@ -1,6 +1,4 @@
-import React from "react";
-
-const denominator = () => ({
+const dom = () => ({
   type: "denominator",
   children: [
     {
@@ -9,15 +7,4 @@ const denominator = () => ({
     }
   ]
 });
-
-export default {
-  slateDOM: () => {
-    denominator();
-  }
-  //,
-  //element: ()=> {
-  //    <span className="denominator" {...attributes}>
-  //      {children}
-  //    </span>
-  //}
-};
+export default { DOM: dom };

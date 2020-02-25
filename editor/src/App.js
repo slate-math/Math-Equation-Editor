@@ -4,8 +4,7 @@ import { Editor, Transforms, Range, createEditor } from "slate";
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
 import { Portal } from "./Portal";
 import { Slate, Editable, withReact, ReactEditor } from "slate-react";
-import comps from "./Components";
-//import { frac, sqrroot, power, sub } from "./equationComponents";
+import components from "./Components";
 // This is what's shown when editor is first displayed
 const initialValue = [
   {
@@ -169,7 +168,7 @@ const insertEquation = (editor, eq) => {
     children: [{ text: " " }]
   };
   if (eq === "fraction") {
-    equation = frac();
+    equation = components.fraction.DOM; // components.fraction.DOM matches frac(), so why isnt the node inserted properly?
   } else if (eq === "power") {
     equation = power();
   } else if (eq === "subscript") {
@@ -238,8 +237,8 @@ const Element = ({ attributes, children, element }) => {
     case "root":
       return (
         <>
-          <span class="radical"></span>
-          <span class="radicand"></span>
+          <span className="radical"></span>
+          <span className="radicand"></span>
           {children}
         </>
       );

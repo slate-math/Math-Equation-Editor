@@ -1,12 +1,25 @@
-import React from "react";
-import numerator from "../Numerator";
-import denominator from "../Denominator";
+const dom = () => ({
+  type: "math",
+  children: [
+    {
+      type: "numerator",
+      children: [
+        {
+          type: "input",
+          children: [{ text: " " }]
+        }
+      ]
+    },
+    {
+      type: "denominator",
+      children: [
+        {
+          type: "input",
+          children: [{ text: " " }]
+        }
+      ]
+    }
+  ]
+});
 
-export default {
-  element: () => {
-    return <span className="fraction"></span>;
-  } ,
-  dom: () => {
-    return this.slateDOM;
-  } 
-};
+export default { DOM: dom };

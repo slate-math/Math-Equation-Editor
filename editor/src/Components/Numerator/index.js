@@ -1,18 +1,11 @@
-import React from "react";
-//const Numerator = () => <span className="numerator"></span>;
+const dom = () => ({
+  type: "numerator",
+  children: [
+    {
+      type: "input",
+      children: [{ text: " " }]
+    }
+  ]
+});
 
-/* export default {
-  element: (attributes, children) => {
-    return <span className="numerator" {...attributes} {...children}></span>;
-  } /* ,
-  dom: (value) => {
-    type: "numerator",
-    children: [
-      {
-        type: "input",
-        children: [{ text: value.x }]
-      }
-    ];
-  }
-}; */
-export default {};
+export default { DOM: dom };
