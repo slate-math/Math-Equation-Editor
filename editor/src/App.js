@@ -4,7 +4,8 @@ import { Editor, Transforms, Range, createEditor } from "slate";
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
 import { Portal } from "./Portal";
 import { Slate, Editable, withReact, ReactEditor } from "slate-react";
-
+import comps from "./Components";
+//import { frac, sqrroot, power, sub } from "./equationComponents";
 // This is what's shown when editor is first displayed
 const initialValue = [
   {
@@ -17,7 +18,7 @@ const initialValue = [
 ];
 
 // The different choices available in the drop-down box
-const EQUATIONS = ["frac{1}{2}", "int_{a}^{b}", "integer", "lim_{lower}"];
+const EQUATIONS = ["fraction", "power", "subscript", "squareroot"];
 
 const App = () => {
   // A bunch of stuff needed for the Slate Editor
@@ -62,7 +63,7 @@ const App = () => {
         }
       }
     },
-    [index, search, target]
+    [index, search, target, editor, chars]
   );
 
   // The structure of the dropdown
@@ -162,31 +163,24 @@ const withAutoFill = editor => {
 
 //--------------------------ToDo--------------------------
 //step 1 -- create slate node (a.k.a Slate DOM)
-const insertEquation = editor => {
-  const fraction = {
-    type: "math",
-    children: [
-      {
-        type: "numerator",
-        children: [
-          {
-            type: "input",
-            children: [{ text: "2" }]
-          }
-        ]
-      },
-      {
-        type: "denominator",
-        children: [
-          {
-            type: "input",
-            children: [{ text: "9" }]
-          }
-        ]
-      }
-    ]
+const insertEquation = (editor, eq) => {
+  let equation = {
+    type: "input",
+    children: [{ text: " " }]
   };
-  Transforms.insertNodes(editor, fraction);
+  if (eq === "fraction") {
+    equation = frac();
+  } else if (eq === "power") {
+    equation = power();
+  } else if (eq === "subscript") {
+    equation = sub();
+  } else if (eq === "squareroot") {
+    equation = sqrroot();
+  } else if (eq === "absolute") {
+    equation = ABS();
+  }
+  //const equation = comps.fraction.slateDOM();
+  Transforms.insertNodes(editor, equation);
   Transforms.move(editor);
 };
 
@@ -211,9 +205,156 @@ const Element = ({ attributes, children, element }) => {
           {children}
         </span>
       );
+    case "power":
+      return (
+        <span className="power" {...attributes}>
+          {children}
+        </span>
+      );
+    case "base":
+      return (
+        <span className="base" {...attributes}>
+          {children}
+        </span>
+      );
+    case "exponent":
+      return (
+        <span className="exponent" {...attributes}>
+          {children}
+        </span>
+      );
+    case "sub":
+      return (
+        <span className="sub" {...attributes}>
+          {children}
+        </span>
+      );
+    case "subscript":
+      return (
+        <span className="subscript" {...attributes}>
+          {children}
+        </span>
+      );
+    case "root":
+      return (
+        <>
+          <span class="radical"></span>
+          <span class="radicand"></span>
+          {children}
+        </>
+      );
+    case "start":
+      return (
+        <span className="start" {...attributes}>
+          {children}
+        </span>
+      );
+
     default:
       return <span {...attributes}>{children}</span>;
   }
 };
+
+const frac = () => ({
+  type: "math",
+  children: [numerator(), denominator()]
+});
+
+const numerator = () => ({
+  type: "numerator",
+  children: [
+    {
+      type: "input",
+      children: [{ text: " " }]
+    }
+  ]
+});
+
+const denominator = () => ({
+  type: "denominator",
+  children: [
+    {
+      type: "input",
+      children: [{ text: " " }]
+    }
+  ]
+});
+
+const power = () => ({
+  type: "power",
+  children: [
+    {
+      type: "base",
+      children: [
+        {
+          type: "input",
+          children: [{ text: "2" }]
+        }
+      ]
+    },
+    {
+      type: "exponent",
+      children: [
+        {
+          type: "input",
+          children: [{ text: "9" }]
+        }
+      ]
+    }
+  ]
+});
+
+const sub = () => ({
+  type: "sub",
+  children: [
+    {
+      type: "base",
+      children: [
+        {
+          type: "input",
+          children: [{ text: "2" }]
+        }
+      ]
+    },
+    {
+      type: "subscript",
+      children: [
+        {
+          type: "input",
+          children: [{ text: "9" }]
+        }
+      ]
+    }
+  ]
+});
+
+const sqrroot = () => ({
+  type: "root",
+  children: [
+    {
+      type: "input",
+      children: [
+        {
+          text: "\u221A"
+        }
+      ]
+    }
+  ]
+});
+
+const ABS = () => ({
+  type: "math",
+  children: [
+    {
+      type: "start",
+      children: [
+        {
+          type: "input",
+          children: [{ text: "| |" }]
+        }
+      ]
+    }
+  ]
+});
 
 export default App;

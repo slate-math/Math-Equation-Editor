@@ -46,6 +46,7 @@ code {
 .fraction > span {
   display: block;
   padding-top: 0.15em;
+  padding-bottom: 0.15em;
 }
 
 .fraction span.denominator {
@@ -128,14 +129,17 @@ code {
   right: 0.3em;
   font-size: 75%;
 }
-
 .exponent {
   position: relative;
+  display: inline-block;
   top: -0.8em;
   right: 0.3em;
   font-size: 75%;
 }
-.exponent .element2 {
-  position: relative;
-  right: 0.2em;
+
+.base {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.2em 0.4ex;
+  text-align: center;
 }
