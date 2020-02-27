@@ -1,25 +1,9 @@
+import numerator from "../Numerator";
+import denominator from "../Denominator";
+
 const dom = () => ({
-  type: "math",
-  children: [
-    {
-      type: "numerator",
-      children: [
-        {
-          type: "input",
-          children: [{ text: " " }]
-        }
-      ]
-    },
-    {
-      type: "denominator",
-      children: [
-        {
-          type: "input",
-          children: [{ text: " " }]
-        }
-      ]
-    }
-  ]
+  type: "fraction",
+  children: [numerator.slateDOM(), denominator.slateDOM()]
 });
 
-export default { DOM: dom };
+export default { slateDOM: dom };

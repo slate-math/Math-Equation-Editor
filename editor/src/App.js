@@ -152,10 +152,10 @@ const App = () => {
 const withAutoFill = editor => {
   const { isInline, isVoid } = editor;
   editor.isInline = element => {
-    return element.type === "fraction" ? true : isInline(element);
+    return element.type === "blank" ? true : isInline(element);
   };
   editor.isVoid = element => {
-    return element.type === "fraction" ? true : isVoid(element);
+    return element.type === "blank" ? true : isVoid(element);
   };
   return editor;
 };
@@ -164,11 +164,11 @@ const withAutoFill = editor => {
 //step 1 -- create slate node (a.k.a Slate DOM)
 const insertEquation = (editor, eq) => {
   let equation = {
-    type: "input",
-    children: [{ text: " " }]
+    type: "math",
+    children: [{ text: "" }]
   };
   if (eq === "fraction") {
-    equation = components.fraction.DOM; // components.fraction.DOM matches frac(), so why isnt the node inserted properly?
+    equation = components.fraction.slateDOM();
   } else if (eq === "power") {
     equation = power();
   } else if (eq === "subscript") {
@@ -178,7 +178,6 @@ const insertEquation = (editor, eq) => {
   } else if (eq === "absolute") {
     equation = ABS();
   }
-  //const equation = comps.fraction.slateDOM();
   Transforms.insertNodes(editor, equation);
   Transforms.move(editor);
 };
@@ -186,7 +185,7 @@ const insertEquation = (editor, eq) => {
 const Element = ({ attributes, children, element }) => {
   // Step 2 -- Add HTML elements so the Slate DOM can render
   switch (element.type) {
-    case "math":
+    case "fraction":
       return (
         <span className="fraction" {...attributes}>
           {children}
@@ -253,21 +252,6 @@ const Element = ({ attributes, children, element }) => {
       return <span {...attributes}>{children}</span>;
   }
 };
-
-const frac = () => ({
-  type: "math",
-  children: [numerator(), denominator()]
-});
-
-const numerator = () => ({
-  type: "numerator",
-  children: [
-    {
-      type: "input",
-      children: [{ text: " " }]
-    }
-  ]
-});
 
 const denominator = () => ({
   type: "denominator",

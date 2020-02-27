@@ -7,4 +7,4 @@ const dom = () => ({
     }
   ]
 });
-export default { DOM: dom };
+export default { slateDOM: dom };
