@@ -3,4 +3,4 @@ import fraction from "./Fraction";
 import numerator from "./Numerator";
 import denominator from "./Denominator";
 
-export default { fraction };
+export default { fraction, numerator, denominator };

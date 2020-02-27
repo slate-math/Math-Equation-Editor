@@ -1,5 +1,7 @@
+import React from "react";
 const dom = () => ({
   type: "denominator",
+  subtype: "math",
   children: [
     {
       type: "input",
@@ -7,4 +9,12 @@ const dom = () => ({
     }
   ]
 });
-export default { slateDOM: dom };
+
+const Element = (attributes, children) => {
+  return (
+    <span className="denominator" {...attributes}>
+      {children}
+    </span>
+  );
+};
+export default { slateDOM: dom, MathElement: Element };

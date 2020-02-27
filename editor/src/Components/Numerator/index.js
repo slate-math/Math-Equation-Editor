@@ -1,5 +1,7 @@
-const dom = () => ({
+import React from "react";
+const dom = eq => ({
   type: "numerator",
+  subtype: "math",
   children: [
     {
       type: "input",
@@ -8,4 +10,12 @@ const dom = () => ({
   ]
 });
 
-export default { slateDOM: dom };
+const Element = (attributes, children) => {
+  return (
+    <span className="numerator" {...attributes}>
+      {children}
+    </span>
+  );
+};
+
+export default { slateDOM: dom, MathElement: Element };

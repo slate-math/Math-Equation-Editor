@@ -164,19 +164,11 @@ const withAutoFill = editor => {
 //step 1 -- create slate node (a.k.a Slate DOM)
 const insertEquation = (editor, eq) => {
   let equation = {
-    type: "math",
+    type: "",
     children: [{ text: "" }]
   };
   if (eq === "fraction") {
     equation = components.fraction.slateDOM();
-  } else if (eq === "power") {
-    equation = power();
-  } else if (eq === "subscript") {
-    equation = sub();
-  } else if (eq === "squareroot") {
-    equation = sqrroot();
-  } else if (eq === "absolute") {
-    equation = ABS();
   }
   Transforms.insertNodes(editor, equation);
   Transforms.move(editor);
@@ -186,158 +178,15 @@ const Element = ({ attributes, children, element }) => {
   // Step 2 -- Add HTML elements so the Slate DOM can render
   switch (element.type) {
     case "fraction":
-      return (
-        <span className="fraction" {...attributes}>
-          {children}
-        </span>
-      );
+      return components.fraction.MathElement(attributes, children);
     case "numerator":
-      return (
-        <span className="numerator" {...attributes}>
-          {children}
-        </span>
-      );
+      return components.numerator.MathElement(attributes, children);
     case "denominator":
-      return (
-        <span className="denominator" {...attributes}>
-          {children}
-        </span>
-      );
-    case "power":
-      return (
-        <span className="power" {...attributes}>
-          {children}
-        </span>
-      );
-    case "base":
-      return (
-        <span className="base" {...attributes}>
-          {children}
-        </span>
-      );
-    case "exponent":
-      return (
-        <span className="exponent" {...attributes}>
-          {children}
-        </span>
-      );
-    case "sub":
-      return (
-        <span className="sub" {...attributes}>
-          {children}
-        </span>
-      );
-    case "subscript":
-      return (
-        <span className="subscript" {...attributes}>
-          {children}
-        </span>
-      );
-    case "root":
-      return (
-        <>
-          <span className="radical"></span>
-          <span className="radicand"></span>
-          {children}
-        </>
-      );
-    case "start":
-      return (
-        <span className="start" {...attributes}>
-          {children}
-        </span>
-      );
+      return components.denominator.MathElement(attributes, children);
 
     default:
       return <span {...attributes}>{children}</span>;
   }
 };
-
-const denominator = () => ({
-  type: "denominator",
-  children: [
-    {
-      type: "input",
-      children: [{ text: " " }]
-    }
-  ]
-});
-
-const power = () => ({
-  type: "power",
-  children: [
-    {
-      type: "base",
-      children: [
-        {
-          type: "input",
-          children: [{ text: "2" }]
-        }
-      ]
-    },
-    {
-      type: "exponent",
-      children: [
-        {
-          type: "input",
-          children: [{ text: "9" }]
-        }
-      ]
-    }
-  ]
-});
-
-const sub = () => ({
-  type: "sub",
-  children: [
-    {
-      type: "base",
-      children: [
-        {
-          type: "input",
-          children: [{ text: "2" }]
-        }
-      ]
-    },
-    {
-      type: "subscript",
-      children: [
-        {
-          type: "input",
-          children: [{ text: "9" }]
-        }
-      ]
-    }
-  ]
-});
-
-const sqrroot = () => ({
-  type: "root",
-  children: [
-    {
-      type: "input",
-      children: [
-        {
-          text: "\u221A"
-        }
-      ]
-    }
-  ]
-});
-
-const ABS = () => ({
-  type: "math",
-  children: [
-    {
-      type: "start",
-      children: [
-        {
-          type: "input",
-          children: [{ text: "| |" }]
-        }
-      ]
-    }
-  ]
-});
 
 export default App;
