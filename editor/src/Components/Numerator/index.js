@@ -2,7 +2,12 @@ import React from "react";
 const dom = eq => ({
   type: "math",
   subtype: "numerator",
-  children: [{ text: " " }]
+  children: [
+    {
+      type: "input",
+      children: [{ text: " " }]
+    }
+  ]
 });
 
 const Element = (attributes, children) => {
