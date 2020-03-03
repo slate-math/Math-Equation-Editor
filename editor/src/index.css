@@ -6,16 +6,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-span .table {
-  display: inline-table;
+
+.app-container {
+  position: relative;
+  background: white;
+  height: 200px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-td {
-  text-align: center;
-}
-
-tr {
-  text-align: center;
+.app {
+  width: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
 }
 
 code {
@@ -28,62 +35,6 @@ code {
   padding: 5px 10px;
   width: 1px;
 }
-
-/*Fractions*/
-.fraction2 {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0.2em 0.4ex;
-  text-align: center;
-}
-.fraction {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0.2em 0.4ex;
-  text-align: center;
-}
-
-.fraction > span {
-  display: block;
-  padding-top: 0.15em;
-  padding-bottom: 0.15em;
-}
-
-.fraction span.denominator {
-  border-top: thin solid black;
-}
-
-.fraction span.bar {
-  display: none;
-}
-/*End of Fractions*/
-
-/*Integrals*/
-.integ {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-}
-
-.integ > span {
-  display: block;
-  font-size: 70%;
-}
-
-.integ .top-limit {
-  margin-bottom: -0.1ex;
-}
-
-.integ .bottom-limit {
-  margin-top: -0.5ex;
-}
-
-.integ .symbol {
-  font-size: 1.5em;
-  font-weight: lighter;
-}
-/*End of Integrals*/
 
 /*Radicals*/
 .radical {

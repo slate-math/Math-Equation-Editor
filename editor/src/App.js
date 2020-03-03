@@ -17,7 +17,7 @@ const initialValue = [
 ];
 
 // The different choices available in the drop-down box
-const EQUATIONS = ["fraction", "power", "subscript", "squareroot"];
+const EQUATIONS = ["fraction", "power", "subscript", "squareroot", "integral"];
 
 const App = () => {
   // A bunch of stuff needed for the Slate Editor
@@ -60,6 +60,14 @@ const App = () => {
             setTarget(null);
             break;
         }
+      } else {
+        switch (event.key) {
+          case "/":
+            event.preventDefault();
+            insertEquation(editor, "fraction");
+            setTarget(null);
+            break;
+        }
       }
     },
     [index, search, target, editor, chars]
@@ -98,8 +106,13 @@ const App = () => {
           const afterMatch = afterText.match(/^(\s|$)/);
 
           if (beforeMatch && afterMatch) {
+            if (beforeMatch === "\\") {
+              setSearch(beforeMatch[0]);
+            } else {
+              setSearch(beforeMatch[1]);
+            }
             setTarget(beforeRange);
-            setSearch(beforeMatch[1]);
+            //setSearch(beforeMatch[1]);
             setIndex(0);
             return;
           }
@@ -160,6 +173,10 @@ const withAutoFill = editor => {
   return editor;
 };
 
+const latexToDom = {
+  frac: "fraction"
+};
+
 //--------------------------ToDo--------------------------
 //step 1 -- create slate node (a.k.a Slate DOM)
 const insertEquation = (editor, eq) => {
@@ -167,9 +184,8 @@ const insertEquation = (editor, eq) => {
     type: "",
     children: [{ text: "" }]
   };
-  if (eq === "fraction") {
-    equation = components.fraction.slateDOM();
-  }
+  //componentName = latexToDom[eq];
+  equation = components[eq].slateDOM(); // TODO: error checking
   Transforms.insertNodes(editor, equation);
   Transforms.move(editor);
 };
@@ -177,12 +193,18 @@ const insertEquation = (editor, eq) => {
 const Element = ({ attributes, children, element }) => {
   // Step 2 -- Add HTML elements so the Slate DOM can render
   switch (element.type) {
-    case "fraction":
-      return components.fraction.MathElement(attributes, children);
-    case "numerator":
-      return components.numerator.MathElement(attributes, children);
-    case "denominator":
-      return components.denominator.MathElement(attributes, children);
+    case "math":
+      /*  maybe?
+      switch (element.subtype) {
+        case "symbol":
+          return symbols[element.symboltype].symbol  ...
+        case "inline":
+          components[element.inlinetype].MathElement(attributes, children);
+        case "matrixes":
+
+      }
+      */
+      return components[element.subtype].MathElement(attributes, children); // todo: error checking
 
     default:
       return <span {...attributes}>{children}</span>;

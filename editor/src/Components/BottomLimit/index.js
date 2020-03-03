@@ -1,13 +1,20 @@
 import React from "react";
+import "./bottomlimit.css";
+
 const dom = eq => ({
   type: "math",
-  subtype: "numerator",
-  children: [{ text: " " }]
+  subtype: "bottomlimit",
+  children: [
+    {
+      type: "input",
+      children: [{ text: " " }]
+    }
+  ]
 });
 
 const Element = (attributes, children) => {
   return (
-    <span className="numerator" {...attributes}>
+    <span className="bottom-limit" {...attributes}>
       {children}
     </span>
   );

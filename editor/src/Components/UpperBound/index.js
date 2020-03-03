@@ -1,13 +1,18 @@
 import React from "react";
 const dom = eq => ({
-  type: "math",
-  subtype: "numerator",
-  children: [{ text: " " }]
+  type: "top limit",
+  subtype: "math",
+  children: [
+    {
+      type: "input",
+      children: [{ text: " " }]
+    }
+  ]
 });
 
 const Element = (attributes, children) => {
   return (
-    <span className="numerator" {...attributes}>
+    <span className="top-limit" {...attributes}>
       {children}
     </span>
   );

@@ -1,13 +1,8 @@
 import React from "react";
 const dom = () => ({
-  type: "denominator",
-  subtype: "math",
-  children: [
-    {
-      type: "input",
-      children: [{ text: " " }]
-    }
-  ]
+  type: "math",
+  subtype: "denominator",
+  children: [{ text: " " }]
 });
 
 const Element = (attributes, children) => {

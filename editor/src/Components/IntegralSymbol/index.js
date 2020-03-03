@@ -1,13 +1,13 @@
 import React from "react";
 const dom = eq => ({
   type: "math",
-  subtype: "numerator",
-  children: [{ text: " " }]
+  subtype: "intsymbol",
+  children: [{ text: "\u222b " }]
 });
 
 const Element = (attributes, children) => {
   return (
-    <span className="numerator" {...attributes}>
+    <span className="intsymbol" {...attributes}>
       {children}
     </span>
   );

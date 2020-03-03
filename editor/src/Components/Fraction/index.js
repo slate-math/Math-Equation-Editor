@@ -1,10 +1,11 @@
 import React from "react";
 import numerator from "../Numerator";
 import denominator from "../Denominator";
+import "./index.css";
 
 const dom = () => ({
-  type: "fraction",
-  subtype: "math",
+  type: "math",
+  subtype: "fraction",
   children: [numerator.slateDOM(), denominator.slateDOM()]
 });
 
