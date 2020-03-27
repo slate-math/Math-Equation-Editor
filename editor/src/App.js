@@ -3,8 +3,9 @@ import "./App.css";
 import { Editor, Transforms, Range, createEditor } from "slate";
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
 import { Portal } from "./Portal";
-import { Slate, Editable, withReact, ReactEditor } from "slate-react";
+import { Slate, Editable, withReact, ReactEditor, useSlate } from "slate-react";
 import components from "./Components";
+//import Button from "./components";
 // This is what's shown when editor is first displayed
 const initialValue = [
   {
@@ -17,7 +18,7 @@ const initialValue = [
 ];
 
 // The different choices available in the drop-down box
-const EQUATIONS = ["fraction", "power", "subscript", "squareroot", "integral"];
+const EQUATIONS = Object.keys(components);
 
 const App = () => {
   // A bunch of stuff needed for the Slate Editor
@@ -64,7 +65,14 @@ const App = () => {
         switch (event.key) {
           case "/":
             event.preventDefault();
+            Transforms.select(editor, target);
             insertEquation(editor, "fraction");
+            setTarget(null);
+            break;
+          case "^":
+            event.preventDefault();
+            Transforms.select(editor, target);
+            insertEquation(editor, "exponent");
             setTarget(null);
             break;
         }
@@ -107,7 +115,7 @@ const App = () => {
 
           if (beforeMatch && afterMatch) {
             if (beforeMatch === "\\") {
-              setSearch(beforeMatch[0]);
+              setSearch(beforeMatch[1]);
             } else {
               setSearch(beforeMatch[1]);
             }
@@ -177,21 +185,24 @@ const latexToDom = {
   frac: "fraction"
 };
 
-//--------------------------ToDo--------------------------
-//step 1 -- create slate node (a.k.a Slate DOM)
 const insertEquation = (editor, eq) => {
   let equation = {
-    type: "",
     children: [{ text: "" }]
   };
-  //componentName = latexToDom[eq];
-  equation = components[eq].slateDOM(); // TODO: error checking
+  //var component = latexToDom[eq];
+  //console.log(component);
+  try {
+    if (!EQUATIONS.includes(eq)) throw "Equation not supported";
+    equation = components[eq].slateDOM();
+  } catch (err) {
+    console.log(err);
+  }
+
   Transforms.insertNodes(editor, equation);
   Transforms.move(editor);
 };
 
 const Element = ({ attributes, children, element }) => {
-  // Step 2 -- Add HTML elements so the Slate DOM can render
   switch (element.type) {
     case "math":
       /*  maybe?
@@ -205,10 +216,21 @@ const Element = ({ attributes, children, element }) => {
       }
       */
       return components[element.subtype].MathElement(attributes, children); // todo: error checking
-
     default:
       return <span {...attributes}>{children}</span>;
   }
 };
+
+/* const EquationButton = ({ eq, icon }) => {
+  const editor = useSlate();
+  return (
+    <Button
+      onMouseDown={event => {
+        event.preventDefault();
+        insertEquation(editor, eq);
+      }}
+    ></Button>
+  );
+}; */
 
 export default App;

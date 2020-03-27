@@ -5,6 +5,7 @@ import integral from "./Integral";
 import bottomlimit from "./BottomLimit";
 import toplimit from "./UpperBound";
 import intsymbol from "./IntegralSymbol";
+import exponent from "./Exponent";
 
 export default {
   fraction,
@@ -13,5 +14,6 @@ export default {
   integral,
   bottomlimit,
   toplimit,
-  intsymbol
+  intsymbol,
+  exponent
 };

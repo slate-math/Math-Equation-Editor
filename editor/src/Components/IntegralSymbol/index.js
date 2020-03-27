@@ -7,7 +7,7 @@ const dom = eq => ({
 
 const Element = (attributes, children) => {
   return (
-    <span className="intsymbol" {...attributes}>
+    <span contentEditable="false" className="int-symbol" {...attributes}>
       {children}
     </span>
   );

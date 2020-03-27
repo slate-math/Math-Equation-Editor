@@ -1,10 +1,4 @@
 /*Fractions*/
-.fraction2 {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0.2em 0.4ex;
-  text-align: center;
-}
 .fraction {
   display: inline-block;
   vertical-align: middle;
@@ -18,11 +12,19 @@
   padding-bottom: 0.15em;
 }
 
+.fraction > span:empty {
+  border-style: dashed;
+  border-color: blue;
+}
+
 .fraction span.denominator {
   border-top: thin solid black;
 }
 
-.fraction span.bar {
-  display: none;
+.fraction span.denominator:empty {
+  border-style: dashed;
+  border-color: blue;
 }
+/*Fix this empty selector thing*/
+
 /*End of Fractions*/

@@ -4,11 +4,20 @@ import toplimit from "../UpperBound";
 import symbol from "../IntegralSymbol";
 import "./index.css";
 
-const dom = () => ({
-  type: "math",
-  subtype: "integral",
-  children: [toplimit.slateDOM(), symbol.slateDOM(), bottomlimit.slateDOM()]
-});
+const dom = () => [
+  {
+    type: "math",
+    subtype: "integral",
+    children: [toplimit.slateDOM(), symbol.slateDOM(), bottomlimit.slateDOM()]
+  },
+  {
+    children: [
+      {
+        text: " "
+      }
+    ]
+  }
+];
 
 const Element = (attributes, children) => {
   return (
