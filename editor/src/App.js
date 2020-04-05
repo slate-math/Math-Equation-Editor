@@ -3,7 +3,7 @@ import "./App.css";
 import { Editor, Transforms, Range, createEditor } from "slate";
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
 import { Portal } from "./Portal";
-import { Slate, Editable, withReact, ReactEditor, useSlate } from "slate-react";
+import { Slate, Editable, withReact, ReactEditor } from "slate-react";
 import components from "./Components";
 //import Button from "./components";
 // This is what's shown when editor is first displayed
@@ -11,7 +11,7 @@ const initialValue = [
   {
     children: [
       {
-        text: "Start typing your equation here!"
+        text: 'Type "\\" and a character to begin'
       }
     ]
   }
@@ -114,11 +114,7 @@ const App = () => {
           const afterMatch = afterText.match(/^(\s|$)/);
 
           if (beforeMatch && afterMatch) {
-            if (beforeMatch === "\\") {
-              setSearch(beforeMatch[1]);
-            } else {
-              setSearch(beforeMatch[1]);
-            }
+            setSearch(beforeMatch[1]);
             setTarget(beforeRange);
             //setSearch(beforeMatch[1]);
             setIndex(0);
@@ -160,6 +156,8 @@ const App = () => {
                 }}
               >
                 {char}
+                {hasLatex(char)}
+                {hasIcon(char)}
               </div>
             ))}
           </div>
@@ -181,10 +179,45 @@ const withAutoFill = editor => {
   return editor;
 };
 
+/**
+ * This methods checks to see if an equation component has an icon property. It prevents
+ * the app from crashing when an icon isn't found.
+ *
+ * @param {string} eq   The name of the equation being looked up via intellisense hotkey
+ */
+const hasIcon = eq => {
+  try {
+    if (!components[eq].Icon()) throw "No icon found";
+    return components[eq].Icon();
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+/**
+ * This methods checks to see if an equation component has an icon property. It prevents
+ * the app from crashing when an icon isn't found.
+ *
+ * @param {string} eq   The name of the equation being looked up via intellisense hotkey
+ */
+const hasLatex = eq => {
+  try {
+    if (!components[eq].LaTeX()) throw "No latex command found";
+    return components[eq].LaTeX();
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 const latexToDom = {
   frac: "fraction"
 };
 
+/**
+ * Inserts an equation's SlateDOM into the tree
+ *
+ * @param {string} eq   The name of the equation being looked up via intellisense hotkey
+ */
 const insertEquation = (editor, eq) => {
   let equation = {
     children: [{ text: "" }]

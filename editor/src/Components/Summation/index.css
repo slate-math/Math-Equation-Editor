@@ -1,27 +1,27 @@
-/*Integrals*/
-.integral {
+/*summations*/
+.summation {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
 }
 
-.integral > span {
+.summation > span {
   display: block;
   font-size: 70%;
 }
 
-.integral .top-limit {
-  margin-bottom: -0.5ex;
+.summation .top-limit {
+  margin-bottom: -0.1ex;
 }
 
-.integral .bottom-limit {
+.summation .bottom-limit {
   margin-top: -0.5ex;
 }
 
-.integral .int-symbol {
+.summation .sum-symbol {
   font-size: 1.5em;
   font-weight: lighter;
 }
 
-/*End of Integrals*/
+/*End of summations*/

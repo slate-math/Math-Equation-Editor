@@ -5,8 +5,8 @@ import "./index.css";
 
 const dom = () => [
   {
-    type: "math",
-    subtype: "fraction",
+    type: "latex",
+    subtype: "frac",
     children: [numerator.slateDOM(), denominator.slateDOM()]
   },
   {
@@ -28,28 +28,12 @@ const Element = (attributes, children) => {
 
 const icon = (attributes, children) => {
   return (
-    <>
-      <span> :</span>
-      <span className="fraction-icon" {...attributes}>
-        <span>x</span>
-        <span class="denominator-icon">y</span>
-        {children}
-      </span>
-    </>
-  );
-};
-const latex = (attributes, children) => {
-  return (
-    <span {...attributes}>
-      <span> - \frac{"{a}{b}"}</span>
+    <span className="fraction-icon" {...attributes}>
+      <span>x</span>
+      <span class="denominator-icon">y</span>
       {children}
     </span>
   );
 };
 
-export default {
-  slateDOM: dom,
-  MathElement: Element,
-  ICON: icon,
-  LaTeX: latex
-};
+export default { slateDOM: dom, MathElement: Element, Icon: icon };

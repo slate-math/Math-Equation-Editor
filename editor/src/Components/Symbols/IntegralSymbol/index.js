@@ -13,4 +13,12 @@ const Element = (attributes, children) => {
   );
 };
 
-export default { slateDOM: dom, MathElement: Element };
+const icon = (attributes, children) => {
+  return (
+    <span className="int-symbol" {...attributes}>
+      {children} &#8747;
+    </span>
+  );
+};
+
+export default { slateDOM: dom, MathElement: Element, Icon: icon };

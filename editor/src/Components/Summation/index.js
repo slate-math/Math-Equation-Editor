@@ -1,14 +1,13 @@
 import React from "react";
 import bottomlimit from "../BottomLimit";
 import toplimit from "../UpperBound";
-import symbol from "../Symbols/IntegralSymbol";
-import pic from "../images/integral.png";
+import symbol from "../Symbols/SummationSymbol";
 import "./index.css";
 
 const dom = () => [
   {
     type: "math",
-    subtype: "integral",
+    subtype: "summation",
     children: [toplimit.slateDOM(), symbol.slateDOM(), bottomlimit.slateDOM()]
   },
   {
@@ -22,14 +21,10 @@ const dom = () => [
 
 const Element = (attributes, children) => {
   return (
-    <span className="integral" {...attributes}>
+    <span className="summation" {...attributes}>
       {children}
     </span>
   );
 };
 
-const icon = (attributes, children) => {
-  return <image src={pic} alt="equation logo" />;
-};
-
-export default { slateDOM: dom, MathElement: Element, Icon: icon };
+export default { slateDOM: dom, MathElement: Element };

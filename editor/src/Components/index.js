@@ -4,8 +4,10 @@ import denominator from "./Denominator";
 import integral from "./Integral";
 import bottomlimit from "./BottomLimit";
 import toplimit from "./UpperBound";
-import intsymbol from "./IntegralSymbol";
+import intsymbol from "./Symbols/IntegralSymbol";
 import exponent from "./Exponent";
+import summation from "./Summation";
+import summationSymbol from "./Symbols/SummationSymbol";
 
 export default {
   fraction,
@@ -15,5 +17,7 @@ export default {
   bottomlimit,
   toplimit,
   intsymbol,
-  exponent
+  exponent,
+  summation,
+  summationSymbol
 };
