@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+  position: relative;
+  background: white;
+  height: 200px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app {
+  width: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.inputContainer {
+  border: dashed 1px black;
+  padding: 5px 10px;
+  width: 1px;
+}
+
+/*Radicals*/
+.radical {
+  position: relative;
+  font-size: 1.6em;
+  vertical-align: middle;
+}
+.n-root {
+  position: absolute;
+  top: -0.333em;
+  left: 0.333em;
+  font-size: 45%;
+}
+.radicand {
+  padding: 0.25em 0.25em;
+  border-top: thin black solid;
+}
+/*End of Radicals*/
+
+/*Limits*/
+.limes {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.2em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.limes > span {
+  display: block;
+  margin: -0.5ex auto;
+}
+
+.limes span.numup,
+.limes span.overdn {
+  font-size: 70%;
+}
+/*End of Limits*/
+
+.subscript {
+  position: relative;
+  top: 0.4em;
+  right: 0.3em;
+  font-size: 75%;
+}
+.exponent {
+  position: relative;
+  display: inline-block;
+  top: -0.8em;
+  right: 0.3em;
+  font-size: 75%;
+}
+
+.base {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.2em 0.4ex;
+  text-align: center;
+}

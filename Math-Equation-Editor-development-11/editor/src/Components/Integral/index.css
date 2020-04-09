@@ -1,0 +1,27 @@
+/*Integrals*/
+.integral {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.integral > span {
+  display: block;
+  font-size: 70%;
+}
+
+.integral .top-limit {
+  margin-bottom: -0.5ex;
+}
+
+.integral .bottom-limit {
+  margin-top: -0.5ex;
+}
+
+.integral .int-symbol {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+/*End of Integrals*/
