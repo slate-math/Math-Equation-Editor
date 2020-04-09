@@ -8,6 +8,7 @@ import intsymbol from "./Symbols/IntegralSymbol";
 import exponent from "./Exponent";
 import summation from "./Summation";
 import summationSymbol from "./Symbols/SummationSymbol";
+import pi from "./Symbols/Pi";
 
 export default {
   fraction,
@@ -19,5 +20,6 @@ export default {
   intsymbol,
   exponent,
   summation,
-  summationSymbol
+  summationSymbol,
+  pi,
 };

@@ -7,15 +7,15 @@ const dom = () => [
   {
     type: "math",
     subtype: "fraction",
-    children: [numerator.slateDOM(), denominator.slateDOM()]
+    children: [numerator.slateDOM(), denominator.slateDOM()],
   },
   {
     children: [
       {
-        text: ""
-      }
-    ]
-  }
+        text: "",
+      },
+    ],
+  },
 ];
 
 const Element = (attributes, children) => {
@@ -29,7 +29,6 @@ const Element = (attributes, children) => {
 const icon = (attributes, children) => {
   return (
     <>
-      <span> :</span>
       <span className="fraction-icon" {...attributes}>
         <span>x</span>
         <span class="denominator-icon">y</span>
@@ -50,6 +49,6 @@ const latex = (attributes, children) => {
 export default {
   slateDOM: dom,
   MathElement: Element,
-  ICON: icon,
-  LaTeX: latex
+  Icon: icon,
+  LaTeX: latex,
 };

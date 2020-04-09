@@ -11,10 +11,10 @@ const initialValue = [
   {
     children: [
       {
-        text: 'Type "\\" and a character to begin'
-      }
-    ]
-  }
+        text: 'Type "\\" and a character to begin',
+      },
+    ],
+  },
 ];
 
 // The different choices available in the drop-down box
@@ -27,16 +27,16 @@ const App = () => {
   const [target, setTarget] = useState();
   const [index, setIndex] = useState(0);
   const [search, setSearch] = useState("");
-  const renderElement = useCallback(props => <Element {...props} />, []);
+  const renderElement = useCallback((props) => <Element {...props} />, []);
   const [value, setValue] = useState(initialValue);
 
-  const chars = EQUATIONS.filter(c =>
+  const chars = EQUATIONS.filter((c) =>
     c.toLowerCase().startsWith(search.toLowerCase())
-  ).slice(0, 10);
+  ).slice(0, 20);
 
   // Custom hotkeys for our editor
   const onKeyDown = useCallback(
-    event => {
+    (event) => {
       if (target) {
         switch (event.key) {
           case "ArrowDown":
@@ -96,7 +96,7 @@ const App = () => {
     <Slate
       editor={editor}
       value={value}
-      onChange={value => {
+      onChange={(value) => {
         setValue(value);
         const { selection } = editor;
 
@@ -143,7 +143,7 @@ const App = () => {
               padding: "3px",
               background: "white",
               borderRadius: "4px",
-              boxShadow: "0 1px 5px rgba(0,0,0,.2)"
+              boxShadow: "0 1px 5px rgba(0,0,0,.2)",
             }}
           >
             {chars.map((char, i) => (
@@ -152,7 +152,7 @@ const App = () => {
                 style={{
                   padding: "1px 3px",
                   borderRadius: "3px",
-                  background: i === index ? "#B4D5FF" : "transparent"
+                  background: i === index ? "#B4D5FF" : "transparent",
                 }}
               >
                 {char}
@@ -168,12 +168,12 @@ const App = () => {
 };
 
 // Not sure what to do with this. Will figure it out later
-const withAutoFill = editor => {
+const withAutoFill = (editor) => {
   const { isInline, isVoid } = editor;
-  editor.isInline = element => {
+  editor.isInline = (element) => {
     return element.type === "blank" ? true : isInline(element);
   };
-  editor.isVoid = element => {
+  editor.isVoid = (element) => {
     return element.type === "blank" ? true : isVoid(element);
   };
   return editor;
@@ -185,7 +185,7 @@ const withAutoFill = editor => {
  *
  * @param {string} eq   The name of the equation being looked up via intellisense hotkey
  */
-const hasIcon = eq => {
+const hasIcon = (eq) => {
   try {
     if (!components[eq].Icon()) throw "No icon found";
     return components[eq].Icon();
@@ -195,12 +195,12 @@ const hasIcon = eq => {
 };
 
 /**
- * This methods checks to see if an equation component has an icon property. It prevents
- * the app from crashing when an icon isn't found.
+ * This methods checks to see if an equation component has a LaTeX property. It prevents
+ * the app from crashing if a latex equivalent isn't found.
  *
  * @param {string} eq   The name of the equation being looked up via intellisense hotkey
  */
-const hasLatex = eq => {
+const hasLatex = (eq) => {
   try {
     if (!components[eq].LaTeX()) throw "No latex command found";
     return components[eq].LaTeX();
@@ -210,7 +210,7 @@ const hasLatex = eq => {
 };
 
 const latexToDom = {
-  frac: "fraction"
+  frac: "fraction",
 };
 
 /**
@@ -220,7 +220,7 @@ const latexToDom = {
  */
 const insertEquation = (editor, eq) => {
   let equation = {
-    children: [{ text: "" }]
+    children: [{ text: "" }],
   };
   //var component = latexToDom[eq];
   //console.log(component);
