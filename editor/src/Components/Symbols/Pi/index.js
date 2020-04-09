@@ -1,13 +1,13 @@
 import React from "react";
-const dom = eq => ({
+const dom = (eq) => ({
   type: "math",
   subtype: "symbol",
-  children: [{ text: "\u222b " }]
+  children: [{ text: "\u03c0 " }],
 });
 
 const Element = (attributes, children) => {
   return (
-    <span contentEditable="false" className="int-symbol" {...attributes}>
+    <span contentEditable="false" className="pi-symbol" {...attributes}>
       {children}
     </span>
   );
@@ -15,8 +15,8 @@ const Element = (attributes, children) => {
 
 const icon = (attributes, children) => {
   return (
-    <span className="int-symbol" {...attributes}>
-      {children} &#8747;
+    <span className="pi-symbol" {...attributes}>
+      {children} &#960;
     </span>
   );
 };

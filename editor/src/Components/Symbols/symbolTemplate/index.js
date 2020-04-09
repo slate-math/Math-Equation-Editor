@@ -1,8 +1,8 @@
 import React from "react";
-const dom = eq => ({
+const dom = (eq) => ({
   type: "math",
   subtype: "symbol",
-  children: [{ text: "\u222b " }]
+  children: [{ text: "\u222b " }],
 });
 
 const Element = (attributes, children) => {

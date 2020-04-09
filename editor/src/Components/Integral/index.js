@@ -9,15 +9,15 @@ const dom = () => [
   {
     type: "math",
     subtype: "integral",
-    children: [toplimit.slateDOM(), symbol.slateDOM(), bottomlimit.slateDOM()]
+    children: [toplimit.slateDOM(), symbol.slateDOM(), bottomlimit.slateDOM()],
   },
   {
     children: [
       {
-        text: " "
-      }
-    ]
-  }
+        text: " ",
+      },
+    ],
+  },
 ];
 
 const Element = (attributes, children) => {
@@ -29,7 +29,16 @@ const Element = (attributes, children) => {
 };
 
 const icon = (attributes, children) => {
-  return <image src={pic} alt="equation logo" />;
+  return (
+    <>
+      <span class="integral" {...attributes}>
+        <span class="toplimit">2&pi;</span>
+        <span class="symbol">&int;</span>
+        <span class="bottomlimit">0</span>
+        {children}
+      </span>
+    </>
+  );
 };
 
 export default { slateDOM: dom, MathElement: Element, Icon: icon };
