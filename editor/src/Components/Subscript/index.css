@@ -1,0 +1,8 @@
+.subscript {
+  position: relative;
+  display: inline-block;
+  vertical-align: sub;
+  margin: 0 0.2em 0.4ex;
+  top: 100%;
+  text-align: center;
+}
