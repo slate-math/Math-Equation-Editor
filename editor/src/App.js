@@ -23,7 +23,7 @@ const EQUATIONS = Object.keys(components);
 const App = () => {
   // A bunch of stuff needed for the Slate Editor
   const ref = useRef();
-  const editor = useMemo(() => withAutoFill(withReact(createEditor())), []);
+  const editor = useMemo(() => editorLayout(withReact(createEditor())), []);
   const [target, setTarget] = useState();
   const [index, setIndex] = useState(0);
   const [search, setSearch] = useState("");
@@ -167,15 +167,23 @@ const App = () => {
   );
 };
 
-// Not sure what to do with this. Will figure it out later
-const withAutoFill = (editor) => {
-  const { isInline, isVoid } = editor;
-  editor.isInline = (element) => {
-    return element.type === "blank" ? true : isInline(element);
+// ToDo: Add a border around empty math fields in our normalizer.
+const editorLayout = (editor) => {
+  const { normalizeNode } = editor;
+
+  editor.normalizeNode = ([node, path]) => {
+    // If we are in a math node
+    if (node.type === "math") {
+      // If the child node is empty, insert css border
+      if (editor.children.length < 1) {
+        const borderedBox = { subtype: "border", children: [{ text: "" }] };
+        Transforms.insertNodes(editor, borderedBox, { at: path.concat(0) });
+      }
+    }
+
+    return normalizeNode([node, path]);
   };
-  editor.isVoid = (element) => {
-    return element.type === "blank" ? true : isVoid(element);
-  };
+
   return editor;
 };
 
@@ -238,16 +246,14 @@ const insertEquation = (editor, eq) => {
 const Element = ({ attributes, children, element }) => {
   switch (element.type) {
     case "math":
-      /*  maybe?
       switch (element.subtype) {
-        case "symbol":
-          return symbols[element.symboltype].symbol  ...
-        case "inline":
-          components[element.inlinetype].MathElement(attributes, children);
-        case "matrixes":
-
+        case "border":
+          return (
+            <div className={`mathtext ${content === null ? "empty" : ""}`}>
+              {content}
+            </div>
+          );
       }
-      */
       return components[element.subtype].MathElement(attributes, children); // todo: error checking
     default:
       return <span {...attributes}>{children}</span>;

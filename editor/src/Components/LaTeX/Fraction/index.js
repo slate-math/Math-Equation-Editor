@@ -3,19 +3,19 @@ import numerator from "../Numerator";
 import denominator from "../Denominator";
 import "./index.css";
 
-const dom = () => [
+const dom = (a) => [
   {
     type: "latex",
     subtype: "frac",
-    children: [numerator.slateDOM(), denominator.slateDOM()]
+    children: [numerator.slateDOM(), denominator.slateDOM()],
   },
   {
     children: [
       {
-        text: ""
-      }
-    ]
-  }
+        text: a,
+      },
+    ],
+  },
 ];
 
 const Element = (attributes, children) => {
