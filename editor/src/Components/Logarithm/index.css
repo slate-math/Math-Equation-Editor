@@ -1,0 +1,20 @@
+/*Logarithm*/
+.base{
+  position: relative;
+  top: .4em;
+  right: .3em;
+  font-size: 75%;
+}
+
+/*Logarithm icon*/
+.logbase{
+  position: relative;
+  top: .4em;
+  right: .1em;
+  font-size: 75%;
+}
+
+.logvalue{
+  right: .1em;
+  position: relative;  
+}

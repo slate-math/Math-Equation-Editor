@@ -1,0 +1,11 @@
+{
+  "about": "This is a hygen-create definitions file. The hygen-create utility creates generators that can be executed using hygen.",
+  "hygen_create_version": "0.2.0",
+  "name": "myGenerator",
+  "files_and_dirs": {
+    "hygen-create.json": true,
+    "index.js": true
+  },
+  "templatize_using_name": "u03a0",
+  "gen_parent_dir": false
+}

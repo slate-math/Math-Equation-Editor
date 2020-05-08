@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      .fraction {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0.2em 0.4ex;
+        text-align: center;
+      }
+
+      .fraction > span {
+        display: block;
+        padding-top: 0.15em;
+      }
+
+      .fraction span.denominator {
+        border-top: thin solid black;
+      }
+
+      .fraction span.bar {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="text-align: center;">Fraction</h1>
+    <div class="fraction_test">
+      <h3>Basic Example</h3>
+      <div class="fraction">
+        <span class="numerator">a</span>
+        <span class="bar">/</span>
+        <span class="denominator">b</span>
+      </div>
+    </div>
+    <div class="fraction_test2">
+      <h3>Nested Example</h3>
+      <div class="fraction">
+        <div class="fraction">
+          <span class="fraction numerator">5(x+y)</span>
+          <span class="fraction bar">/</span>
+          <span class="fractiondenominator">7(x*y)</span>
+        </div>
+        <span class="bar">/</span>
+        <span class="denominator">5x</span>
+      </div>
+    </div>
+  </body>
+</html>

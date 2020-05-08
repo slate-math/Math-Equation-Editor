@@ -1,0 +1,1063 @@
+leftParenthesis U00028
+leftSquareBracket U0005B
+leftCurlyBracket U0007B
+radical U0221A
+cuberoot U0221B
+fourthRoot U0221C
+leftCeiling U02308
+leftFloor U0230A
+upperLeftCorner U0231C
+lowerLeftCorner U0231E
+upperLeftOrLowerRightCurlyBracketSection U023B0
+lightLefttOrToiseShellBracketornament U02772
+leftSShapedBagDelimiter U027C5
+longDivision U027CC
+mathematicalLeftWhiteSquareBracket U027E6
+mathematicalLeftAngleBracket U027E8
+mathematicalLeftDoubleAngleBracket U027EA 
+mathematicalLeftWhiteTortoiseShellBracket U027EC
+mathematicalLeftFlattenedParenthesis U027EE
+leftWhiteCurlyBracket U02983
+leftWhiteParenthesis U02985
+zNotationLeftImageBracket U02987
+zNotationLeftBindingBracket U02989
+leftSquareBracketWithUnderbar U0298B
+leftSquareBracketWithTickInTopCorner U0298D
+leftSquareBracketWithTickInBottomCorner U0298F
+leftAngleBracketWithDot U02991
+leftArcLessThanBracket U02993
+doubleLeftArcGreaterThanBracket U02995
+leftBlackTortoiseShellBracket U02997
+leftWigglyFence U029D8
+leftDoubleWigglyFence U029DA
+leftPointingCurvedAngleBracket U029FC
+exclamationMark U00021
+rightParenthesis U00029
+rightSquareBracket U0005D
+rightCurlyBracket U0007D
+rightCeiling U02309
+rightFloor U0230B
+upperRightCorner U0231D
+lowerRightCorner U0231F
+upperRightOrLowerLeftCurlyBracketSection U023B1
+lightRightTortoiseShellBracketOrnament U02773
+rightShapedBagDelimiter U027C6
+mathematicalRightWhiteSquareBracket U027E7
+mathematicalRightAngleBracket U027E9
+mathematicalRightDoubleAngleBracket U027EB
+mathematicalRightWhiteTortoiseShellBracket U027ED
+mathematicalRightFlattenedParenthesis U027EF
+rightWhiteCurlybracket U02984
+rightWhiteParenthesis U02986
+zNotationRightImageBracket U02988
+zNotationRightBindingBracket U0298A
+rightSquareBracketWithUnderbar U0298C
+rightSquareBracketWithTickInBottomCorner U0298E
+rightSquareBracketWithTickInTopCorner U02990
+rightAngleBracketWithDot U02992
+rightArcGreaterThanBracket U02994
+doubleRightArcLessThanBracket U02996
+rightBlackTortoiseShellBracket U02998
+rightWigglyFence U029D9
+rightDoubleWigglyFence U029DB
+rightPointingCurvedAngleBracket U029FD
+verticalBar U0007C
+doubleVerticalBar U02016
+tripleVerticalBarDelimiter U02980
+comma U0002C
+colon U0003A
+semicolonP U0003B
+topSquareBracket U023B4
+topParenthesis U023DC
+topCurlyBracket U023DE
+bottomSquareBracket U023B5
+bottomParenthesis U023DD
+bottomCurlyBracket U023DF
+graveAccent U00300
+acuteAccent U00301
+circumflexAccent U00302
+tilde U00303
+macron U00304
+overbarEmbellishment U00305
+breve U00306
+dotAbove U00307
+dieresis U00308
+combiningHookAbove U00309
+ring U0030A
+caron U0030C
+candrabindu U00310
+combiningTurnedCommaAbove U00312
+combiningCommaAboveRight U00315
+leftAngleAbove U0031A
+combiningLeftHarpoonAbove U020D0
+combiningRightHarpoonAbove U020D1
+combiningLongVeticalLineOverlay U020D2
+combiningRightArrowAbove U020D7
+combiningThreeDotsAbove U020DB
+combiningFourDotsAbove U020DC
+combiningAnnuitySymbol U020E7
+combiningWideBridgeAvove U020E9
+combiningAsteriskAbove U020F0
+combiningTripleUnderdot U020E8
+doubleStruckNArySummation U02140
+productOperator U0220F
+coproductOperator U02210
+summationOperator U02211
+integralOperator U0222B 
+doubleIntegralOperator U0222C
+tripleIntegralOperator U0222D
+contourIntegralOperator U0222E
+doubleContourIntegralOperator U0222F
+tripleContourIntegralOperator U02230
+clockwiseIntegral U02231
+clockWise U02232
+anticlockWise U02233
+logicalAndOperator U022C0
+logicalOrOperator U022C1
+intersectionOperator U022C2
+unionOperator U022C3
+leftOuterJoin U027D5
+rightOuterJoin U027D6
+fullOuterjoin U027D7
+largeUpTack U027D8
+largeDownTack U027D9
+bigSolidus U029F8
+bigReverseSolidus U029F9
+nAryCircledDotOperator U02A00
+nAryCircledPlusOperator U02A01
+nAryCircledTimesOperator U02A02
+nAryUnionOperatorWithDot U02A03
+nAryUnionOperatorWithPlus U02A04
+nArySquareIntersectoinOperator U02A05
+nArySquareUnionOperator U02A06
+twoLogicalAndOperator U02A07
+twoLogicalOrOperator U02A08
+nAryTimesOperator U02A09
+moduloTwoSum U02A0A
+summationWithIntegral U02A0B
+quadrupleIntegralOperator U02A0C
+finitePartIntegral U02A0D
+integralWithDoubleStroke U02A0E
+integralAverageWithSlash U02A0F
+circulationFunction U02A10
+anticlockwiseIntegration U02A11
+lineIntegrationWithRectangularPathAroundPole U02A12
+lineIntegrationWithSemiCircularPathAroundPole U02A13
+lineIntegrationNotIncludingThePole U02A14 
+integralAroundAPointOperator U02A15
+quaternionIntegralOperator U02A16
+integralWithLeftwardsArrowWithHook U02A17
+integralWIthTimesSign U02A18
+integralWithIntersection U02A19
+integralWithUnion U02A1A
+integralWithOverbar U02A1B
+integralWithUnderbar U02A1C
+join U02A1D
+largeLeftTriangleOperator U02A1E
+zNotationSchemaComposition U02A1F
+zNotationschemaPiping U02A20
+zNotationSchemaProjection U02A21
+largeTripleVerticalBarOperator U02AFC
+nAryWhiteVerticalBar U02AFF
+arabicMathematicalOperatorMeemWIthHahWithTatweel U1EEF0
+arabicMathematicalOperatorHahWithDal U1EEF1
+plusSignB U0002B
+plusOrMinusSign U000B1
+middleDot U000B7
+multiplySign U000D7
+divideSign U000F7
+daggerRelation U02020
+doubleDaggerRelation U02021
+filled U02022
+characterTie U02040
+fractionSlash U02044
+turnedAmpersand U0214B
+minusSign U02212
+minusOrPlusSign U02213
+dotAbove U02214
+divisionSlash U02215
+smallSetMinus U02216
+centeredAsterisk U02217
+compositeFunction U02218
+bulletOperator U02219
+logicalAnd U02227
+logicalOr U02228
+intersection U02229
+logicalSum U0222A
+dotAbove U02238
+mostPositive U0223E
+wreathProduct U02240
+multiset U0228C
+withDot U0228D
+plusSignInUnion U0228E
+squareIntersection U02293
+squareUnion U02294
+plusSignInCircle U02295
+minusSignInCircle U02296
+multiplySignInCircle U02297
+solidusInCircle U02298
+middleDotInCircle U02299
+smallCircleInCircle U0229A
+asteriskInCircle U0229B
+equalInCircle U0229C
+hyphenInCircle U0229D
+plusSignInBox U0229E
+minusSignInBox U0229F
+multiplySignInBox U022A0
+smallDotInBox U022A1
+intercal U022BA
+logical U022BB
+largeWedge U022BC
+largeVee U022BD
+whiteDiamond U022C4
+smallMiddleDot U022C5
+smallStar U022C6
+divisonOnTimes U022C7
+timesSignLeftClosed U022C9
+timesSignRightClosed U022CA
+leftSemidirectProduct U022CB
+rightSemidirectProduct U022CC
+curlyLogicalOr U022CE
+culryLogicalAnd U022CF
+doubleIntersection U022D2
+doubleUnion U022D3
+barOverSmallWedge U02305
+doubleBarAbove U02306
+circleWithVerticalBar U0233D
+open U025B3
+rightTriangle U025B7
+leftTriangle U025C1
+mediumLargeCircle U025CB
+verticalBarInBox U025EB
+orWithDotInside U027C7
+andWithDot U027D1
+lozengeDividedByHorizontalRule U027E0
+whiteConcaveSidedDiamond U027E1
+whiteConcaveSidedDiamondWithLeftwardsTick U027E2
+whiteConcaveSidedDiamondWithRightwardsTick U027E3
+whiteSquareWithLeftwardsTick U027E4
+whiteSquareWithRightwardsTick U027E5
+circleWithHorizontalBar U029B5
+circledVerticalBar U029B6
+cricledParallel U029B7
+circledReverseSolidus U029B8
+circledPerpendicular U029B9
+circledLessThan U029C0
+circledGreaterThan U029C1
+squaredRisingDiagonalSlash U029C4
+squaredFallingDiagonalSlash U029C5
+squaredAsterisk U029C6
+squaredSmallCircle U029C7
+squaredSquare U029C8
+triangleWithSerifsAtBottom U029CD
+whiteHourglass U029D6
+blackHourglass U029D7
+shuffleProduct U029E2
+blackLozenge U029EB
+reverseSolidusOperator U029F5
+solidusWithOverbar U029F6
+reverseSolidusWithHorizontalStroke U029F7
+doublePlus U029FA
+triplePlus U029FB
+tiny U029FE
+miny U029FF
+plusSignWithSmallCircleAbove U02A22
+plusSignWithCircumflexAccentAbove U02A23
+plusSignWithTildeAbove U02A24
+plusSignWithDotBelow U02A25
+plusSignWithTildeBelow U02A26
+plusSignWithSubscriptTwo U02A27
+plusSignWithBlackTriangle U02A28
+minusSignWithCommaAbove U02A29
+minusSignWithDotBelow U02A2A
+minusSignWithFallingDots U02A2B
+minusSignWithRisingDots U02A2C
+plusSignInLeftHalfCircle U02A2D
+plusSignInRightHalfCircle U02A2E
+crossProduct U02A2F
+multiplicationSignWithDotAbove U02A30
+multiplicationSignWithUnderbar U02A31
+semidirectProductWithBottomClosed U02A32
+smashProduct U02A33
+multiplicationSignInLeftHalfCircle U02A34
+multiplicationSignInRightHalfCircle U02A35
+circledMultiplicationSignWithCircumflexAccent U02A36
+multiplicationSignInDoubleCircle U02A37
+circledDivisionSign U02A38
+plusSignInTriangle U02A39
+minusSignInTriangle U02A3A
+multiplicationSignInTriangle U02A3B
+interiorProduct U02A3C
+righthandInteriorProduct U02A3D
+zNotationRelationalComposition U02A3E
+amalgamationOrCoproduct U02A3F
+intersectionWithDot U02A40
+unionWithMinusSign U02A41
+unionWithOverbar U02A42
+intersectionWithOverbar U02A43
+intersectionWithLogicalAnd U02A44
+unionWithLogicalOr U02A45
+unionAboveIntersection U02A46
+intersectionAboveUnion U02A47
+unionAboveBarAboveIntersection U02A48
+intersectionAboveBarAboveUnion U02A49
+unionBesideAndJoinedWithUnion U02A4A
+intersectionBesideAndJoinedWithIntersection U02A4B
+closedUnionWithSerifs U02A4C
+closedIntersectionWithSerifs U02A4D
+doubleSquareIntersection U02A4E
+doubleSquareUnion U02A4F
+closedUnionWithSerifsAndSmashProduct U02A50
+logicalAndWithDotAbove U02A51
+logicalOrWithDotAbove U02A52
+doubleLogicalAnd U02A53
+doubleLogicalOr U02A54
+twoIntersectingLogicalAnd U02A55
+twoIntersectingLogicalOr U02A56
+slopingLargeOr U02A57
+slopingLargeAnd U02A58
+logicalAndWithMiddleStem U02A5A
+logicalOrWithMiddleStem U02A5B
+logicalAndWithHorizontalDash U02A5C
+logicalOrWithHorizontalDash U02A5D
+logicalAndWithDoubleOverbar U02A5E
+logicalAndWithUnderbar U02A5F
+logicalAndWithDoubleUnderbar U02A60
+smallVeeWithUnderbar U02A61
+logicalOrWithDoubleOverbar U02A62
+logicalOrWithDoubleUnderbar U02A63
+zNotatinDomainAntirestriction U02A64
+zNotationRangeAntirestriction U02A65
+equalsSignAbovePlusSign U02A71
+plusSignAboveEqualsSign U02A72
+tripleVerticalBarBinaryRelation U02AF4
+tripleVerticalBarWithHorizontalStroke U02AF5
+tripleColonOperaor U02AF6
+tripleSolidusBinaryRelation U02AFB
+doubleSolidusOperator U02AFD
+whiteVerticalBar U02AFE
+numberSign U00023
+dollarSign U00024
+percentSign U00025
+ampersand U00026
+period U0002E
+solidus U0002F
+questionMark U0003F
+commericalAt U00040
+reverseSolidus U0005C
+poundSign U000A3
+yenSign U000A5
+sectionSymbol U000A7
+lnotNotSign U000AC
+paragraphSymbol U000B6
+impedance U001B5
+greekReversedLunateEpsilonSymbol U003F6
+horizontalBar U02015
+doubleLowLine U02017
+doubleBaselineDot U02025
+ellipsis U02026
+prime U02032
+doublePrime U02033
+triplePrime U02034
+reversePrime U02035
+doubleReversePrime U02036
+tripleReversePrime U02037
+caret U02038
+doubleExclamationMark U0203C
+rectangle U02043
+doubleQuestionMark U02047
+quadruplePrime U02057
+euroSign U020AC
+combiningEnclosingCircle U020DD
+combiningEnclosingSquare U020DE
+combiningEnclosingDiamond U020DF
+combiningEnclosingUpwardPointingTriangle U020E4
+eulerConstant U02107
+planckConstant U0210E
+conductance U02127
+turnedCapitalF U02132
+doubleStruckSmallPi U0213C
+turnedSansSerifCapitalG U02141
+turnedSansSerifCapitalI U02142
+reverseSansSerifCapitalI U02143
+turnedSansSerifCapitalY U02144
+doubleStruckItalicCapitalD U02145
+doubleStruckItalicSmallD U02146
+doubleStruckItalicSmallE U02147
+doubleStruckItalicSmallI U02148
+doubleStruckItalicSmallJ U02149
+propertyLine U0214A
+upDownArrowWithBase U021A8
+rightwardsArrowWithCornerDownards U021B4
+downwardsArrowWithCornerLeftward U021B5
+northWestArrowToLongBar U021B8
+leftwardsArrowToBarOverRightwardsArrrowToBar U021B9
+anticlockwiseOpenCircleArrow U021BA
+clockwiseOpenCircleArrow U021BB
+upwardsArrowWithDoubleStroke U021DE
+downwardsArrowWithDoubleStroke U021DF
+leftwardsDashedArrow U021E0
+upwardsDashedArrow U021E1
+rightwardsDashedArrow U021E2
+downwardsDashedArrow U021E3
+leftwardsWhiteArrow U021E6
+upwardsWhiteArrow U021E7
+rightwardsWhiteArrow U021E8
+downwardsWhiteArrow U021E9
+upwardsWhiteArrowFromBar U021EA
+forAll U02200
+complementSign U02201
+atLeastOneExists U02203
+negatedExists U02204
+circelSlash U02205
+laplacian U02206
+endOfProof U0220E
+radical U0221A
+infinity U0221E
+rightAngle U0221F
+angle U02220
+angleMeasured U02221
+angleSpherical U02222
+therefore U02234
+because U02235
+sineWave U0223F
+top U022A4
+bottom U022A5
+hermitianConjugateMatrix U022B9
+rightAngleMeasured U022BE
+rightTriangle U022BF
+threeDots U022EF
+diameterSign U02300
+house U02302
+reverseNot U02310
+squareLozenge U02311
+profileOfALine U02312
+profileOfASurface U02313
+viewdataSquare U02317
+turnedNotSign U02319
+topHalfIntegral U02320
+bottomHalfIntegral U02321
+sixCarbonRing U0232C
+conicalTaper U02332
+topAndBottom U02336
+aplFunctionalSymbolBackslashBar U02340
+boxedUpCaret U02353
+boxedQuestionMark U02370
+rightAngleWithDownwardsZigzagArrow U0237C
+horizontalBenzeRing U02394
+leftPaenthesisUpperHook U0239B
+leftParenthesisExtension U0239C
+leftParenthesisLowerHook U0239D
+rightParenthesisUpperHook U0239E
+rightParenthesisExtension U0239F
+rightParenthesisLowerHook U023A0
+leftSquareBracketUpperCorner U023A1
+leftSquareBracketExtension U023A2
+leftSquareBracketLowerCorner U023A3
+rightSquareBracketUpperCorner U023A4
+rightSquareBracketExtension U023A5
+rightSquareBracketLowerCorner U023A6
+leftCurlyBracketUpperHook U023A7
+leftCurlyBracketMiddlePiece U023A8
+leftCurlyBracketLowerHook U023A9
+curlyBracketExtension U023AA
+rightCurlyBracketUpperHook U023AB
+rightCurlyBracketMiddlePiece U023AC
+rightCurlyBracketLowerHook U023AD
+integralExtension U023AE
+horizontalLineExtension U023AF
+summationTop U023B2
+summationBottom U023B3
+bottomSquareBracketOverTopSquareBracket U023B6
+radicalSymbolBottom U023B7
+leftVerticalBoxLine U023B8
+rightVerticalBoxLine U023B9
+returnSymbol U023CE
+topTortoiseShellBracket U023E0
+bottomTortoiseShellBracket U023E1
+whiteTrapezium U023E2
+benseRingWithCircle U023E3
+straightness U023E4
+flatness U023E5
+acCurrent U023E6
+electricalIntersection U023E7
+blankSymbol U02422
+openBox U02423
+doublyBrokenVert U02506
+upperHalfBlock U02580
+lowerHalfBlock U02584
+fullBlock U02588
+leftHalfBlock U0258C
+rightHalfBlock U02590
+25ShadedBlock U02591
+50ShadedBlock U02592
+75ShadedBlock U02593
+squaredFilled U025A0
+squareOpen U025A1
+whiteSquareWithRoundedCorners U025A2
+whiteSquareContainingBlackSmallSquare U025A3
+horizontalRuleFilled U025A4
+verticalRuleFilled U025A5
+squareWithOrthogonalCrosshatchFill U025A6
+nwToSeRuleFilled U025A7
+neToSwRuleFilled U025A8
+squareWithDiagonalCrosshatchFill U025A9
+sqBullet U025AA
+whiteSmallSquare U025AB
+blackRectangle U025AC
+horizontalRectangleOpen U025AD
+blackVerticalRectangle U025AE
+rectangleWhiteVertical U025AF
+balckParallelogram U025B0
+parallelogramOpen U025B1
+blackTriangleUp U025B2
+blackTriangle U025B4
+blackTriangleRight U025B6
+smallBlackTriangleRight U025B8
+smallTriangleRight U025B9
+blackPointerRight U025BA
+whitePointerRight U025BB
+bigBlackTriangleDown U025BC
+bigTriangleDown U025BD
+blackTriangleDown U025BE
+triangleDown U025BF
+blackTriangleLeft U025C0
+smallBlackTriangleLeft U025C2
+smallTriangleLeft U025C3
+blackPointerLeft U025C4
+whitePointerLeft U025C5
+blackDiamond U025C6
+whiteDiamondOpen U025C7
+blackInWhiteDiamond U025C8
+fisheye U025C9
+lozengeOrTotalMark U025CA
+dottedCircle U025CC
+circleWithVerticalFill U025CD
+bullseye U025CE
+circleFilled U025CF
+circleFilledLeftHalf U025D0
+circleFilledRIghtHalf U025D1
+circleFilledBottomHalf U025D2
+circleFilledTopHalf U025D3
+circleWithUpperRIghtQuadrantBlack U025D4
+circleWithAllButUpperLeftQuadrantBlack U025D5
+leftHalfBlackCircle U025D6
+rightHalfBlackCircle U025D7
+inverseBullet U025D8
+inverseWhiteCircle U025D9
+upperHalfInverseWhiteCircle U025DA
+lowerHalfInverseWhiteCircle U025DB
+upperLeftQuadrantCircularArc U025DC
+upperRightQuadrantCircularArc U025DD
+lowerRightQuadrantCircularArc U025DE
+lowerLeftQuadrantCircularArc U025DF
+upperHalfCircle U025E0
+lowerHalfCircle U025E1
+lowerRightTriangleFilled U025E2
+lowerLeftTriangleFilled U025E3
+upperLeftTriangleFilled U025E4
+upperRightTriangleFilled U025E5
+whiteBullet U025E6
+squareFilledLeftHalf U025E7
+squareFilledRightHalf U025E8
+squareFilledTopLeftCorner U025E9
+squareFilledBottomRightCorner U025EA
+triangleWithCenteredDot U025EC
+upPointingTriangleWithLeftHalfBlack U025ED
+upPointingTriangleWithRightHalfBlack U025EE
+largeCircle U025EF
+whiteSquareWithUpperLeftQuadrant U025F0
+whiteSquareWithLowerLeftQuadrant U025F1
+whiteSquareWithLowerRightQuadrant U025F2
+whiteSquareWithUpperRightQuadrant U025F3
+whiteCircleWithUpperLeftQuadrant U025F4
+whiteCircleWithLowerLeftQuadrant U025F5
+whiteCircleWithLowerRightQuadrant U025F6
+whiteCircleWithUpperRightQuadrant U025F7
+upperLeftTriangle U025F8
+upperRightTriangle U025F9
+lowerLeftTriangle U025FA
+whiteMediumSquare U025FB
+blackMediumSquare U025FC
+whiteMediumSmallSquare U025FD
+blackMediumSmallSquare U025FE
+lowerRightTriangle U025FF
+starFilled U02605
+starOpen U02606
+sun U02609
+dangerousBend U02621
+blackSmilingFace U0263B
+whiteSunWithRays U0263C
+firstQuarterMoon U0263D
+lastQuarterMoon U0263E
+venusFemale U02640
+marsMale U02642
+spadesSuitSymbol U02660
+heartSuitSymbol U02661
+diamondSuitSymbol U02662
+clubSuitSymbol U02663
+spadeWhite U02664
+filledHeart U02665
+filledDiamond U02666
+clubWhite U02667
+musicNote U02669
+eighthNote U0266A
+beamedEighthNotes U0266B
+musicalFlat U0266D
+musicNatural U0266E
+musicaSharp U0266F
+permanentPaperSign U0267E
+dieFace1 U02680
+dieFace2 U02681
+dieFace3 U02682
+dieFace4 U02683
+dieFace5 U02684
+dieFace6 U02685
+whiteCircleWithDotRight U02686
+whiteCircleWithTwoDots U02687
+blackCircleWithWhiteDotRight U02688
+blackCircleWithTwoWhiteDots U02689
+maleAndFemaleSign U026A5
+mediumWhiteCircle U026AA
+mediumBlackCircle U026AB
+mediumSmallWhiteCircle U026AC
+neuter U026B2
+checkMark U02713
+malteseCross U02720
+circledWhiteStar U0272A
+sixPointedBlackStar U02736
+heavyTeardropSpokedAsterisk U0273D
+rightArrowWithBoldHead U0279B
+threeDimensionalAngle U027C0
+whiteTriangleContainingSmallWhiteTriangle U027C1
+openSubset U027C3
+openSuperset U027C4
+whiteDiamondWithCentredDot U027D0
+risingDiagonalCrossingFallingDiagonal U0292B
+fallingDiagonalCrossingRisingDiagonal U0292C
+southEastArrowCrossingNorthEastArrow U0292D
+northEastArrowCrossingSouthEastArrow U0292E
+fallingDiagonalCrossingNorthEastArrow U0292F
+risingDiagonalCrossingSouthEastArrow U02930
+northEastArrowCrossingNorthWestArrow U02931
+northWestArrowCrossingNorthEastArrow U02932
+arrowPointingRightwardsThenCuringUpwards U02934
+arrowPointingRightwardsThenCurvingDownwards U02935
+zNotationSpot U02981
+dottedFence U02999
+verticalZigzagLine U0299A
+measuredAngleOpeningLeft U0299B
+rightAngleVariantWithSquare U0299C
+measuredRightAngleWithDot U0299D
+angleWithSInside U0299E
+acuteAngle U0299F
+sphericalAngleOpeningLeft U029A0
+sphericalAngleOpeningUp U029A1
+turnedAngle U029A2
+reversedAngle U029A3
+angleWithUnderbar U029A4
+reversedAngleWithUnderbar U029A5
+obliqueAngleOpeningUp U029A6
+obliqueAngleOpeningDown U029A7
+measuredAngleWithOpenArmEndingInArrowPointingUpAndRight U029A8
+measuredAngleWithOpenArmEndingInArrowPointingUpAndLeft U029A9
+measuredAngleWithOpenArmEndingInArrowPointingDownAndRight U029AA
+measuredAngleWithOpenArmEndingInArrowPointingDownAndLeft U029AB
+measuredAngleWithOpenArmEndingInArrowPointingRightAndUp U029AC
+measuredAngleWithOpenArmEndingInArrowPointingLeftAndUp U029AD
+measuredAngleWithOpenArmEndingInArrowPointingRightAndDown U029AE
+measuredAngleWithOpenArmEndingInArrowPointingLeftAndDown U029AF
+reversedEmptySet U029B0
+emptySetWithOverbar U029B1
+emptySetWithSmallCircleAbove U029B2
+emptySetWithRightArrowAbove U029B3
+emptySetWithLeftArrowAbove U029B4
+circleDividedByHorizontalBarAndTopHalfDividedByVerticalBar U029BA
+circleWithSuperimposedx U029BB
+circledAnticlockwiseRotatedDivisionSign U029BC
+upArrowThroughCircle U029BD
+circledWhiteBullet U029BE
+circledBullet U029BF
+circleWithSmallCircleToTheRight U029C2
+circleWithTwoHorizontalStrokesToTheRight U029C3
+twoJoinedSquares U029C9
+triangleWithDotAbove U029CA
+triangleWithUnderbar U029CB
+sInTriangle U029CC
+incompleteInfinity U029DC
+tieOverInfinity U029DD
+infinityNegatedWithVerticalBar U029DE
+squareWithContouredOutline U029E0
+thermodynamic U029E7
+downPointingTriangleWithLeftHalfBlack U029E8
+downPointingTriangleWithRightHalfBlack U029E9
+blackDiamondDownArrrow U029EA
+circleDownArrow U029EC
+blackCircleDownArrow U029ED
+errorBarredWhiteSquare U029EE
+errorBarredBlackSquare U029EF
+errorBarredWhiteDiamond U029F0
+errorBarredBlackDiamond U029F1
+errorBarredWhiteCircle U029F2
+errorBarredBlackCircle U029F3
+perpendicularWithS U02AE1
+downTackWithCircleBelow U02AF1
+squareWithTopHalfBlack U02B12
+squareWithBottomHalfBlack U02B13
+squareWithUpperRightDiagonalHalfBlack U02B14
+squareWithLowerLeftDiagonalHalfBlack U02B15
+diamondWithLeftHalfBlack U02B16
+diamondWithRightHalfBlack U02B17
+diamondWithTopHalfBlack U02B18
+diamondWithBottomHalfBlack U02B19
+dottedSquare U02B1A
+blackLargeSquare U02B1B
+whiteLargeSquare U02B1C
+blackVerySmallSquare U02B1D
+whiteVerySmallSquare U02B1E
+blackPentagon U02B1F
+whitePentagon U02B20
+whiteHexagon U02B21
+blackHexagon U02B22
+horizontalBlackHexagon U02B23
+blackLargeCircle U02B24
+blackMediumDiamond U02B25
+whiteMediumDiamond U02B26
+blackMediumLozenge U02B27
+whiteMediumLozenge U02B28
+blackSmallDiamond U02B29
+balckSmallLozenge U02B2A
+whiteSmallLozenge U02B2B
+blackHorizontalEllipse U02B2C
+whiteHorizontalEllipse U02B2D
+blackVerticalEllipse U02B2E
+whiteVerticalEllipse U02B2F
+whiteMediumStar U02B50
+blackMediumStar U02B51
+whiteSmallStar U02B52
+blackRightPointingPentagon U02B53
+whiteRightPointingPentagon U02B54
+postalMark U03012
+zigzag U03030
+mathematicalBoldDigit0 U1D7CE
+mathematicalBoldDigit1 U1D7CF
+mathematicalBoldDigit2 U1D7D0
+mathematicalBoldDigit3 U1D7D1
+mathematicalBoldDigit4 U1D7D2
+mathematicalBoldDigit5 U1D7D3
+mathematicalBoldDigit6 U1D7D4
+mathematicalBoldDigit7 U1D7D5
+mathematicalBoldDigit8 U1D7D6
+mathematicalBoldDigit9 U1D7D7
+mathematicalDoubleStruckDigit0 U1D7D8
+mathematicalDoubleStruckDigit1 U1D7D9
+mathematicalDoubleStruckDigit2 U1D7DA
+mathematicalDoubleStruckDigit3 U1D7DB
+mathematicalDoubleStruckDigit4 U1D7DC
+mathematicalDoubleStruckDigit5 U1D7DD
+mathematicalDoubleStruckDigit6 U1D7DE
+mathematicalDoubleStruckDigit7 U1D7DF
+mathematicalDoubleStruckDigit8 U1D7E0
+mathematicalDoubleStruckDigit9 U1D7E1
+mathematicalSansSerifDigit0 U1D7E2
+mathematicalSansSerifDigit1 U1D7E3
+mathematicalSansSerifDigit2 U1D7E4
+mathematicalSansSerifDigit3 U1D7E5
+mathematicalSansSerifDigit4 U1D7E6
+mathematicalSansSerifDigit5 U1D7E7
+mathematicalSansSerifDigit6 U1D7E8
+mathematicalSansSerifDigit7 U1D7E9
+mathematicalSansSerifDigit8 U1D7EA
+mathematicalSansSerifDigit9 U1D7EB
+mathematicalSansSerifBoldDigit0 U1D7EC
+mathematicalSansSerifBoldDigit1 U1D7ED
+mathematicalSansSerifBoldDigit2 U1D7EE
+mathematicalSansSerifBoldDigit3 U1D7EF
+mathematicalSansSerifBoldDigit4 U1D7F0
+mathematicalSansSerifBoldDigit5 U1D7F1
+mathematicalSansSerifBoldDigit6 U1D7F2
+mathematicalSansSerifBoldDigit7 U1D7F3
+mathematicalSansSerifBoldDigit8 U1D7F4
+mathematicalSansSerifBoldDigit9 U1D7F5
+mathematicalMonospaceDigit0 U1D7F6
+mathematicalMonospaceDigit1 U1D7F7
+mathematicalMonospaceDigit2 U1D7F8
+mathematicalMonospaceDigit3 U1D7F9
+mathematicalMonospaceDigit4 U1D7FA
+mathematicalMonospaceDigit5 U1D7FB
+mathematicalMonospaceDigit6 U1D7FC
+mathematicalMonospaceDigit7 U1D7FD
+mathematicalMonospaceDigit8 U1D7FE
+mathematicalMonospaceDigit9 U1D7FF
+lessThanSignR U0003C
+equalsSignR U0003D
+greaterThanSignR U0003E
+closeUp U02050
+leftwardArrow U02190
+upwardArrow U02191
+rightwardArrow U02192
+downwardArrow U02193
+leftAndRightArrow U02194
+UpAndDownArrow U02195
+nwPointingArrow U02196
+nePointingArrow U02197
+sePointingArrow U02198
+swPointingArrow U02199
+notLeftArrow U0219A
+notRightArrow U0219B
+leftArrowWavy U0219C
+rightArrowWavy U0219D
+leftTwoHeadedArrow U0219E
+upTwoHeadedArrow U0219F
+rightTwoHeadedArrow U021A0
+downTwoHeadedArrow U021A1
+leftArrowTailed U021A2
+rightArrowTailed U021A3
+mapsToLeftward U021A4
+mapsToUpward U021A5
+mapsToRightward U021A6
+mapsToDownward U021A7
+leftArrowHooked U021A9
+rightArrowHooked U021AA
+leftArrowLooped U021AB
+rightArrowLooped U021AC
+leftAndRightArrWavy U021AD
+notLeftAndRightArrow U021AE
+downwardsZigzagArrow U021AF
+ishA U021B0
+rshA U021B1
+leftDownAngledArrow U021B2
+rightDownAngledArrow U021B3
+leftCurvedArrow U021B6
+rightCurvedArrow U021B7
+leftHarpoonUp U021BC
+leftHarpoonDown U021BD
+upHarpoonRight U021BE
+upHarpoonLeft U021BF
+rightHarpoonUp U021C0
+rightHarpoonDown U021C1
+downHarpoonRight U021C2
+downHarpoonLeft U021C3
+rightArrowOverLeftArrow U021C4
+upArrowDownArrow U021C5
+leftArrowOverRightArrow U021C6
+twoLeftArrows U021C7
+twoUpArrows U021C8
+twoRightArrows U021C9
+twoDownArrows U021CA
+leftHarpoonOverRight U021CB
+rightHarpoonOverLeft U021CC
+notImpliedBy U021CD
+notLeftAndRightDoubleArrows U021CE
+notImplies U021CF
+isImpliedBy U021D0
+upDoubleArrow U021D1
+implies U021D2
+downDoubleArrow U021D3
+leftAndRightDoubleArrow U021D4
+upAndDownDoubleArrow U021D5
+nwPointingDoubleArrow U021D6
+nePointingDoubleArrow U021D7
+sePointingDoubleArrow U021D8
+swPointingDoubleArrow U021D9
+leftTripleArrow U021DA
+rightTripleArrow U021DB
+leftwardsSquiggleArrow U021DC
+rightwardsSquiggleArrow U021DD
+leftwardsArrowToBar U021E4
+rightwardArrowToBar U021E5
+rightArrowWithSmallCircle U021F4
+downwardsArrrowLeftwardsOfUpwardsArrow U021F5
+threeRightwardsArrows U021F6
+leftwardsArrowWithVerticalStroke U021F7
+rightwardsArrowWithVerticalStroke U021F8
+leftRightArrowWithVerticalStroke U021F9
+leftwardsArrowWiithDoubleVerticalStroke U021FA
+rightwardsArrowWithDoubleVerticalStroke U021FB
+leftRightArrowWithDoubleVerticalStroke U021FC
+leftwardsOpenHeadedArrow U021FD
+rightwardsOpenHeadedArrow U021FE
+leftRightOpenHeadedArrow U021FF
+setMembershipVariant U02208 
+negatedSetMembership U02209
+setMembership U0220A
+containsVariant U0220B
+negatedContainsVariant U0220C
+smallContainsMember U0220D
+isProportionalTo U0221D
+midR U02223
+negatedMid U02224
+parallel U02225
+notParallel U02226
+ratio U02236
+twoColons U02237
+excess U02239
+minuWithFourDots U0223A
+homothetic U0223B
+similar U0223C
+reverseSimilar U0223D
+notSimilar U02241
+equalsSimilar U02242
+similarEquals U02243
+notSimilarEquals U02244
+similarEquals U02243
+notSimilarEquals U02244
+congruentWith U02245
+similarNotEquals U02246
+notCongruentWith U02247
+approximate U02248
+notApproximate U02249
+approximateEquals U0224A
+approximatelyIdenticalTo U0224B
+allEqualTo U0224C
+asymptoticallyEqualTo U0224D
+bumpyEquals U0224E
+bumpyEqualsEquals U0224F
+equalsSingleDotAbove U02250
+equalsEvenDots U02251
+equalsFallingDots U02252
+equalsRisingDots U02253
+colonEquals U02254
+equalsColon U02255
+circleOnEquaslSign U02256
+circleEquals U02257
+arcEqualsCorrespondsTo U02258
+correspondsTo U02259
+logicalOrEquals U0225A
+starEquals U0225B
+triangleEquals U0225C
+equalsByDefinition U0225D
+measuredBy U0225E
+equalWithQuestionMark U0225F
+notEqual U02260
+identicalWith U02261
+notIdenticalWith U02262
+strictEquivalence U02263
+lessThanOrEqual U02264
+greaterThanOrEqual U02265
+lessDoubleEquals U02266
+greaterDoubleEquals U02267
+lessNotDoubleEquals U02268
+greaterNotDoubleEquals U02269
+muchLessThanType2 U0226A
+muchGreaterThanType2 U0226B
+between U0226C
+notAsymptoticallyEqualTo U0226D
+notLessThan U0226E
+notGreaterThan U0226F
+notLessThanOrEqual U02270
+notGreaterThanOrEqual U02271
+lessSimilar U02272
+greaterSimilar U02273
+notLessSimilar U02274
+notGreaterSimilar U02275
+lessGreater U02276
+greaterLess U02277
+notLessGreater U02278
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

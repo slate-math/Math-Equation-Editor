@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+.btn-group button {
+  background-color: rgb(255, 255, 255); /*background */
+  border: 1px solid black;
+  color: rgb(0, 0, 0);
+  width: 3em;
+  height: 3em;
+  cursor: pointer;
+  float: left;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none;
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:hover {
+  background-color: rgb(157, 157, 157);
+}

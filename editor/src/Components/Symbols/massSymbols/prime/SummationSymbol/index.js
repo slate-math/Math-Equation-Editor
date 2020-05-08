@@ -1,0 +1,16 @@
+import React from "react";
+const dom = (eq) => ({
+  type: "math",
+  subtype: "prime",
+  children: [{ text: "\u2032" }],
+});
+
+const Element = (attributes, children) => {
+  return <span {...attributes}>{children}</span>;
+};
+
+const icon = (attributes, children) => {
+  return <span {...attributes}>   &#8242;{children}</span>;
+};
+
+export default { slateDOM: dom, MathElement: Element, Icon: icon };

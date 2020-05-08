@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      .integ {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+      }
+
+      .integ > span {
+        display: block;
+        font-size: 70%;
+      }
+
+      .integ .top-limit {
+        margin-bottom: -0.1ex;
+      }
+
+      .integ .bottom-limit {
+        margin-top: -0.5ex;
+      }
+
+      .integ .symbol {
+        font-size: 1.5em;
+        font-weight: lighter;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="text-align: center;">Integrals</h1>
+    <div class="integral">
+      <h3>Basic Example</h3>
+      <span class="integ">
+        <span class="top-limit">2&pi;</span>
+        <span class="symbol">&int;</span>
+        <span class="bottom-limit">0</span>
+      </span>
+      5x dx = 0
+    </div>
+    <div class="integral">
+      <h3>Double Integral</h3>
+      <span class="integ">
+        <span class="top-limit">1</span>
+        <span class="symbol">&int;</span>
+        <span class="bottom-limit">0</span>
+      </span>
+      <span class="integ">
+        <span class="top-limit">x</span>
+        <span class="symbol">&int;</span>
+        <span class="bottom-limit">2x</span>
+      </span>
+      xy dy
+    </div>
+  </body>
+</html>
