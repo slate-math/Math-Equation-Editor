@@ -2,7 +2,6 @@ import React from "react";
 import bottomlimit from "../BottomLimit";
 import toplimit from "../UpperBound";
 import symbol from "../Symbols/IntegralSymbol";
-import pic from "../images/integral.png";
 import "./index.css";
 
 const dom = () => [

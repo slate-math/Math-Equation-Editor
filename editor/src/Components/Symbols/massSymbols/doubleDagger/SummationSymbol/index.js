@@ -1,22 +1,18 @@
 import React from "react";
 const dom = (eq) => ({
   type: "math",
-  subtype: "symbol",
-  children: [{ text: "\u222b " }],
+  subtype: "summationSymbol",
+  children: [{ text: "\u2021" }],
 });
 
 const Element = (attributes, children) => {
-  return (
-    <span contentEditable="false" className="int-symbol" {...attributes}>
-      {children}
-    </span>
-  );
+  return <span {...attributes}>{children}</span>;
 };
 
 const icon = (attributes, children) => {
   return (
     <span className="int-symbol" {...attributes}>
-      {children} &#8747;
+      {children} &#8225;
     </span>
   );
 };

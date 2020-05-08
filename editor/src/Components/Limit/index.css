@@ -1,0 +1,42 @@
+/*Limit*/
+.LimIndex{
+  position: relative;
+  top: .8em;
+  right: 2.4em;
+  font-size: 60%;
+}
+
+
+.arrow{
+  position: relative;
+  top: .8em;
+  right: 2.3em;
+  font-size: 60%;
+}
+
+
+.LimValue{
+  position: relative;
+  top: .8em;
+  right: 2.2em;
+  font-size: 60%;;
+}
+
+/*Limit icon*/
+.limes {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.2em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.limes>span {
+  display: block;
+  margin: -0.5ex auto;
+}
+
+.limes span.numup,
+.limes span.overdn {
+  font-size: 60%;
+}

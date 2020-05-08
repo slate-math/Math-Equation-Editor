@@ -1,13 +1,13 @@
 import React from "react";
-const dom = eq => ({
+const dom = (eq) => ({
   type: "math",
   subtype: "numerator",
   children: [
     {
       type: "input",
-      children: [{ text: " " }]
-    }
-  ]
+      children: [{ text: "" }],
+    },
+  ],
 });
 
 const Element = (attributes, children) => {

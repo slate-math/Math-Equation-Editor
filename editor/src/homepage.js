@@ -3,11 +3,14 @@ import App from "./App";
 
 const Home = () => {
   return (
-    <div className="app-container">
-      <div className="app">
-        <App />
+    <>
+      <h3>Equation Editor</h3>
+      <div className="app-container">
+        <div className="app">
+          <App />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

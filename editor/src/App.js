@@ -125,6 +125,7 @@ const App = () => {
         setTarget(null);
       }}
     >
+      <ButtonBar editor={editor} />
       <Editable
         renderElement={renderElement}
         onKeyDown={onKeyDown}
@@ -171,18 +172,21 @@ const App = () => {
 const editorLayout = (editor) => {
   const { normalizeNode } = editor;
 
-  editor.normalizeNode = ([node, path]) => {
-    // If we are in a math node
-    if (node.type === "math") {
-      // If the child node is empty, insert css border
-      if (editor.children.length < 1) {
-        const borderedBox = { subtype: "border", children: [{ text: "" }] };
-        Transforms.insertNodes(editor, borderedBox, { at: path.concat(0) });
+  /* editor.normalizeNode = ([node, path]) => {
+    // Rules for math nodes
+    if (Element.isElement(node) && node.type === "math") {
+      for (const child of Node.children(editor, path)) {
+        if (Element.isElement(child) && !editor.isInline(child)) {
+          const emptyBox = { type: "empty", children: [{ text: "" }] };
+          Transforms.insertNodes(editor, emptyBox, { at: path.concat(0) });
+          return;
+        }
       }
     }
 
-    return normalizeNode([node, path]);
-  };
+    // Fall back to the original `normalizeNode` to enforce other constraints.
+    normalizeNode([node, path]);
+  }; */
 
   return editor;
 };
@@ -230,8 +234,6 @@ const insertEquation = (editor, eq) => {
   let equation = {
     children: [{ text: "" }],
   };
-  //var component = latexToDom[eq];
-  //console.log(component);
   try {
     if (!EQUATIONS.includes(eq)) throw "Equation not supported";
     equation = components[eq].slateDOM();
@@ -243,16 +245,19 @@ const insertEquation = (editor, eq) => {
   Transforms.move(editor);
 };
 
+/**
+ * Inserts HTML directly into the page according to what is on the DOM
+ *
+ * @param attributes  Parent attributes are passed down to children
+ * @param children    Slate's way of keeping track of what's a parent and what's a child
+ * @param element     The DOM element
+ */
 const Element = ({ attributes, children, element }) => {
   switch (element.type) {
     case "math":
-      switch (element.subtype) {
-        case "border":
-          return (
-            <div className={`mathtext ${content === null ? "empty" : ""}`}>
-              {content}
-            </div>
-          );
+      switch (element.type) {
+        case "input":
+          return <span style="background-color: blue"></span>;
       }
       return components[element.subtype].MathElement(attributes, children); // todo: error checking
     default:
@@ -260,16 +265,27 @@ const Element = ({ attributes, children, element }) => {
   }
 };
 
-/* const EquationButton = ({ eq, icon }) => {
-  const editor = useSlate();
+function ButtonBar(props) {
   return (
-    <Button
-      onMouseDown={event => {
-        event.preventDefault();
-        insertEquation(editor, eq);
-      }}
-    ></Button>
+    <div className="btn-group">
+      <button
+        onMouseDown={(event) => {
+          event.preventDefault();
+          insertEquation(props.editor, "fraction");
+        }}
+      >
+        {hasIcon("fraction")}
+      </button>
+
+      <button
+        onClick={() => {
+          insertEquation(props.editor, "integral");
+        }}
+      >
+        {hasIcon("integral")}
+      </button>
+    </div>
   );
-}; */
+}
 
 export default App;
