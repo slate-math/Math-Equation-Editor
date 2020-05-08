@@ -5,9 +5,9 @@ const dom = () => ({
   children: [
     {
       type: "input",
-      children: [{ text: "x" }]
-    }
-  ]
+      children: [{ text: " " }],
+    },
+  ],
 });
 
 const Element = (attributes, children) => {

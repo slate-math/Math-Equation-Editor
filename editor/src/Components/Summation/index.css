@@ -24,4 +24,17 @@
   font-weight: lighter;
 }
 
+.summation .sum-symbol-ico {
+  font-size: 1em;
+  font-weight: lighter;
+}
+
+.summation .top-limit-ico {
+  margin-bottom: -0.3ex;
+}
+
+.summation .bottom-limit-ico {
+  margin-top: -0.3ex;
+}
+
 /*End of summations*/

@@ -10,7 +10,7 @@ const Element = (attributes, children) => {
 };
 
 const icon = (attributes, children) => {
-  return <span {...attributes}>{children} &#882;</span>;
+  return <span {...attributes}>   &#x3D0;{children}</span>;
 };
 
 export default { slateDOM: dom, MathElement: Element, Icon: icon };

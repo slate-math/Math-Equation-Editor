@@ -1,0 +1,15 @@
+.radical {
+  position: relative;
+  font-size: 1.6em;
+  vertical-align: middle;
+}
+.n-root {
+  position: absolute;
+  top: -0.333em;
+  left: 0.333em;
+  font-size: 45%;
+}
+.radicand {
+  padding: 0.25em 0.25em;
+  border-top: thin black solid;
+}

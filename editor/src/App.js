@@ -107,16 +107,17 @@ const App = () => {
           const before = wordBefore && Editor.before(editor, wordBefore);
           const beforeRange = before && Editor.range(editor, before, start);
           const beforeText = beforeRange && Editor.string(editor, beforeRange);
+          // Regex to trigger start of intellisense
           const beforeMatch = beforeText && beforeText.match(/^\\(\w+)$/);
           const after = Editor.after(editor, start);
           const afterRange = Editor.range(editor, start, after);
           const afterText = Editor.string(editor, afterRange);
+          // Regex to know what to not include when searching using intellisense
           const afterMatch = afterText.match(/^(\s|$)/);
 
           if (beforeMatch && afterMatch) {
             setSearch(beforeMatch[1]);
             setTarget(beforeRange);
-            //setSearch(beforeMatch[1]);
             setIndex(0);
             return;
           }
@@ -267,7 +268,7 @@ const Element = ({ attributes, children, element }) => {
 
 function ButtonBar(props) {
   return (
-    <div className="btn-group">
+    <div className="btn-group" display="inline-block">
       <button
         onMouseDown={(event) => {
           event.preventDefault();
@@ -283,6 +284,30 @@ function ButtonBar(props) {
         }}
       >
         {hasIcon("integral")}
+      </button>
+
+      <button
+        onClick={() => {
+          insertEquation(props.editor, "summation");
+        }}
+      >
+        {hasIcon("summation")}
+      </button>
+
+      <button
+        onClick={() => {
+          insertEquation(props.editor, "exponent");
+        }}
+      >
+        {hasIcon("exponent")}
+      </button>
+
+      <button
+        onClick={() => {
+          insertEquation(props.editor, "subscript");
+        }}
+      >
+        {hasIcon("subscript")}
       </button>
     </div>
   );

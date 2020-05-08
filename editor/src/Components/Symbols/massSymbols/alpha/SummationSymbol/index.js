@@ -1,7 +1,7 @@
 import React from "react";
 const dom = (eq) => ({
   type: "math",
-  subtype: "summationSymbol",
+  subtype: "alphaSymbol",
   children: [{ text: "\u03b1" }],
 });
 
@@ -9,4 +9,11 @@ const Element = (attributes, children) => {
   return <span {...attributes}>{children}</span>;
 };
 
-export default { slateDOM: dom, MathElement: Element };
+const icon = (attributes, children) => {
+  return (
+    <span className="alphaSymbol" {...attributes}>    &alpha;{children}
+    </span>
+  );
+};
+
+export default { slateDOM: dom, MathElement: Element, Icon: icon };

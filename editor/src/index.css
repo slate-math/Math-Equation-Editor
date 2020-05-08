@@ -11,21 +11,8 @@ h3 {
   text-align: center;
 }
 
-.app-container {
-  position: relative;
-  background: white;
-  height: 200px;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 .app {
-  width: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  width: 90%;
   padding: 20px;
 }
 
@@ -95,7 +82,7 @@ code {
   position: relative;
   display: inline-block;
   top: -0.8em;
-  right: 0.3em;
+  right: 0.1em;
   font-size: 75%;
 }
 

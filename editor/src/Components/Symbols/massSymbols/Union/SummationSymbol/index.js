@@ -9,4 +9,8 @@ const Element = (attributes, children) => {
   return <span {...attributes}>{children}</span>;
 };
 
-export default { slateDOM: dom, MathElement: Element };
+const icon = (attributes, children) => {
+  return <span {...attributes}>   &#8746;{children}</span>;
+};
+
+export default { slateDOM: dom, MathElement: Element, Icon: icon };

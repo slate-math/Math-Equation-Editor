@@ -27,4 +27,14 @@ const Element = (attributes, children) => {
     </span>
   );
 };
-export default { slateDOM: dom, MathElement: Element };
+
+const icon = (attributes, children) => {
+  return (
+    <>
+      <span> x</span>
+      <span className="subscript">2</span>
+    </>
+  );
+};
+
+export default { slateDOM: dom, MathElement: Element, Icon: icon };

@@ -6,17 +6,17 @@ const dom = () => [
     children: [
       {
         type: "input",
-        children: [{ text: " " }]
-      }
-    ]
+        children: [{ text: " " }],
+      },
+    ],
   },
   {
     children: [
       {
-        text: " "
-      }
-    ]
-  }
+        text: " ",
+      },
+    ],
+  },
 ];
 
 const Element = (attributes, children) => {
@@ -26,4 +26,14 @@ const Element = (attributes, children) => {
     </span>
   );
 };
-export default { slateDOM: dom, MathElement: Element };
+
+const icon = (attributes, children) => {
+  return (
+    <>
+      <span> x</span>
+      <span className="exponent">2</span>
+    </>
+  );
+};
+
+export default { slateDOM: dom, MathElement: Element, Icon: icon };
