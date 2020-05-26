@@ -22,6 +22,7 @@ const EQUATIONS = Object.keys(components);
 
 const App = () => {
   // A bunch of stuff needed for the Slate Editor
+  const [chosen, setChosen] = useState();
   const ref = useRef();
   const editor = useMemo(() => editorLayout(withReact(createEditor())), []);
   const [target, setTarget] = useState();
@@ -253,14 +254,20 @@ const insertEquation = (editor, eq) => {
  * @param children    Slate's way of keeping track of what's a parent and what's a child
  * @param element     The DOM element
  */
-const Element = ({ attributes, children, element }) => {
+const Element = ({ attributes, children, element, onClick, active }) => {
   switch (element.type) {
     case "math":
-      switch (element.type) {
-        case "input":
-          return <span style="background-color: blue"></span>;
-      }
       return components[element.subtype].MathElement(attributes, children); // todo: error checking
+    case "input":
+      return (
+        <div
+          {...attributes}
+          onClick={onClick}
+          className={active ? "input active" : "input"}
+        >
+          {children}
+        </div>
+      );
     default:
       return <span {...attributes}>{children}</span>;
   }

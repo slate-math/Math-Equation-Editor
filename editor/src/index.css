@@ -21,10 +21,19 @@ code {
     monospace;
 }
 
-.inputContainer {
-  border: dashed 1px black;
-  padding: 5px 10px;
-  width: 1px;
+.input {
+  background-color: aliceblue;
+  align-items: center;
+  cursor: default;
+  display: flex;
+  height: 1em;
+  justify-content: center;
+  width: 1em;
+}
+
+.active {
+  background-color: teal;
+  color: white;
 }
 
 .borderedBox {
