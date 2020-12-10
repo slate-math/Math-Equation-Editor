@@ -34,12 +34,14 @@
   border-right: none;
 }
 
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 .btn-group button:hover {
   background-color: rgb(157, 157, 157);
+}
+
+.Matrix-group  {
+  border: 1px solid black;
+  display: flex;
+  display: inline-block;
+  padding: 5px
+
 }

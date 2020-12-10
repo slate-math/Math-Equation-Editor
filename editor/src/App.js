@@ -1,10 +1,18 @@
-import React from "react";
+import React, {Component, Fragment} from 'react';
+import ReactDOM from 'react-dom';
 import "./App.css";
 import { Editor, Transforms, Range, createEditor } from "slate";
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
 import { Portal } from "./Portal";
 import { Slate, Editable, withReact, ReactEditor } from "slate-react";
 import components from "./Components";
+import simpleNumberLocalizer from 'react-widgets-simple-number';
+import NumberPicker from 'react-widgets/lib/NumberPicker';
+import NumberPickerContainer from "./Components/AntonioNumPicker"
+import MyForm from './Components/AntonioMatrixBar';
+
+simpleNumberLocalizer();
+
 //import Button from "./components";
 // This is what's shown when editor is first displayed
 const initialValue = [
@@ -20,7 +28,8 @@ const initialValue = [
 // The different choices available in the drop-down box
 const EQUATIONS = Object.keys(components);
 
-const App = () => {
+const App = () => { 
+
   // A bunch of stuff needed for the Slate Editor
   const ref = useRef();
   const editor = useMemo(() => editorLayout(withReact(createEditor())), []);
@@ -127,6 +136,7 @@ const App = () => {
       }}
     >
       <ButtonBar editor={editor} />
+      <MatrixBar editor={editor}/>
       <Editable
         renderElement={renderElement}
         onKeyDown={onKeyDown}
@@ -266,6 +276,7 @@ const Element = ({ attributes, children, element }) => {
   }
 };
 
+
 function ButtonBar(props) {
   return (
     <div className="btn-group" display="inline-block">
@@ -311,6 +322,17 @@ function ButtonBar(props) {
       </button>
     </div>
   );
+}
+
+function MatrixBar(props){
+  return(
+    <div className ="Matrix-group">
+      
+    <MyForm/>
+    
+  </div>  
+  );
+
 }
 
 export default App;
