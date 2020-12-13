@@ -1,0 +1,17 @@
+.inline { 
+    display: inline-table;  
+    
+}
+
+.inline2 { 
+    display: inline-table;
+    text-align: center;
+    padding: flex;
+    height:100px;
+    border-spacing: 10px;
+    vertical-align: middle;
+}
+
+.inline3 { 
+    display: inline-table;
+}

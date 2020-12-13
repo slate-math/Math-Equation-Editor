@@ -1,5 +1,6 @@
 import fraction from "./Fraction";
-import antonio from "./AntonioSymbol";
+import matrix3x3 from "./Matrix3x3";
+import matrix2x2 from "./Matrix2x2";
 import antonioElement from "./AntonioElement"
 import numerator from "./Numerator";
 import denominator from "./Denominator";
@@ -765,7 +766,8 @@ import mscrB from "./Symbols/massSymbols/mscrB/template";
 import mfrakC from "./Symbols/massSymbols/mfrakC/template";
 
 export default {
-  antonio,
+  matrix2x2,
+  matrix3x3,
   antonioElement,
   fraction,
   numerator,

@@ -7,13 +7,15 @@ import matrixElement from "../AntonioElement";
 import antonioElement from "../AntonioElement";
 import barberElement from "../AntonioElement";
 import Table from 'react-bootstrap/Table'
+
 import "./index.css";
 
-const dom = (eq) => [
+
+const dom = (props) => [
   {
   type: "math",
-  subtype: "antonio",
-  children: [matrixElement.slateDOM(), matrixElement.slateDOM(), matrixElement.slateDOM(),],
+  subtype: "matrix2x2",
+  children: [antonioElement.slateDOM(),],
 },
   {
     children: [
@@ -28,73 +30,33 @@ const dom = (eq) => [
 ];
 
 
-
 const Element = (attributes, children) => {   
   var Latex = require('react-latex');
-  
+
   return (
     <span {...attributes}>
       <span className = "inline" style={{ userSelect: "none" }} contentEditable={false}>  
-        <Latex displayMode={false}>{`$$ \\Biggr[ $$`}</Latex>
+      <Latex displayMode={false}>{`$$ \\Biggr( $$`}</Latex>
+
       </span>
       
-      <table className = "inline2">
-      <tr>
-        
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
+      <table id ="myTable" className = "inline2"  rules="">
+      <tr>        
       <td>{children}</td>
       <td>{children}</td>
       </tr>
-      <tr>
+      <tr>        
       <td>{children}</td>
       <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      </tr>
-      <tr>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      </tr>
-      <tr>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      </tr>
-      <tr>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      </tr>
-      <tr>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      <td>{children}</td>
-      </tr>
-      </table>
-     
+      </tr>      
+      </table>     
 
       <span className= "inline3" style={{ userSelect: "none" }} contentEditable={false}>  
-        <Latex displayMode={false}>{`$$ \\Biggr] $$`}</Latex>
+      <Latex displayMode={false}>{`$$ \\Biggr) $$`}</Latex>
+
       </span>
     </span>
+    
   );
 };
 
@@ -102,7 +64,7 @@ const icon = (attributes, children) => {
   var Latex = require('react-latex');
   return (
     <span {...attributes}>
-      <span>  <Latex displayMode={true}>{`$$
+      <span>  <Latex displayMode={false}>{`$$
     \\left(
     \\begin{array}{cc|c}
         \u2b1a & \u2b1a & \u2b1a \\\\
@@ -110,7 +72,8 @@ const icon = (attributes, children) => {
         \u2b1a & \u2b1a & \u2b1a \\\\
     \\end{array}
     \\right)
-  $$`}</Latex></span>
+  $$`}</Latex>
+  </span>
       {children}
     </span>
   );};

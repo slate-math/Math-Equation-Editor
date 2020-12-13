@@ -9,7 +9,8 @@ import components from "./Components";
 import simpleNumberLocalizer from 'react-widgets-simple-number';
 import NumberPicker from 'react-widgets/lib/NumberPicker';
 import NumberPickerContainer from "./Components/AntonioNumPicker"
-import MyForm from './Components/AntonioMatrixBar';
+import MyForm from './Components/MatrixBar';
+import MyTable from './Components/AntonioTable'
 
 simpleNumberLocalizer();
 
@@ -325,13 +326,17 @@ function ButtonBar(props) {
 }
 
 function MatrixBar(props){
-  return(
-    <div className ="Matrix-group">
-      
-    <MyForm/>
+return(
+  <div className ="Matrix-group">
     
-  </div>  
-  );
+  <MyForm/>
+  <div className="adders">
+  <button type="button" onclick="myFunction()">Add Row</button>
+  &nbsp;
+  <button type="button" onclick="myFunction()">Add Column</button>
+  </div>
+</div>  
+);
 
 }
 

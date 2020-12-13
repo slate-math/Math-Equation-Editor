@@ -1,26 +1,34 @@
+import React from 'react';
 
-import { render } from 'katex'
-import React from 'react'
+let rows = [
+  'Setting One',
+  'Setting Two',
+  'Setting Three',
+  'Setting Four',
+];
 
-export default class myTable extends React.Component{
+class MyTable extends React.Component {
 
-createTable = () => {
+  createTable = () => {
+
     let table = []
-    // Outer loop to create rows
-    for( let i = 0; i < 3; i++){
+    for (let i = 0; i < rows.length; i++) {
       let children = []
-      // inner loop to create children
-      for(let j = 0; j < 5; j++){
-      children.push(<td>{`Column ${j + 1}`}</td>)
-      }
-      // create the parent and add the children
+      children.push(<td>{rows[i]}</td>)
       table.push(<tr>{children}</tr>)
     }
-    return (table)
-     }
-  
+    return table
 
- 
-  
+  }
+
+  render() {
+    return(
+      <table>
+        {this.createTable()}
+      </table>
+    )
+  }
 
 }
+
+export default MyTable;
