@@ -4,7 +4,7 @@ import "./index.css";
 
 const dom = (eq) => ({
   type: "math",
-  subtype: "antonioElement",
+  subtype: "antonioElement3",
   children: [
     {
       type: "input",
@@ -15,7 +15,7 @@ const dom = (eq) => ({
 
 const Element = (attributes, children) => {
   return (
-    <span className="antonio-Element" {...attributes}>
+    <span className="antonio-Element3" {...attributes}>
       {children}
     </span>
   );

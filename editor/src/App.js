@@ -10,7 +10,8 @@ import simpleNumberLocalizer from 'react-widgets-simple-number';
 import NumberPicker from 'react-widgets/lib/NumberPicker';
 import NumberPickerContainer from "./Components/AntonioNumPicker"
 import MyForm from './Components/MatrixBar';
-import MyTable from './Components/AntonioTable'
+import MatrixTable from './Components/AntonioTable'
+
 
 simpleNumberLocalizer();
 
@@ -335,6 +336,7 @@ return(
   &nbsp;
   <button type="button" onclick="myFunction()">Add Column</button>
   </div>
+  <MatrixTable/>
 </div>  
 );
 

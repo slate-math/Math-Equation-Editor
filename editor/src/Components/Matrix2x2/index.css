@@ -4,13 +4,41 @@
 }
 
 .inline2 { 
-    display: inline-table;
-    text-align: center;
-    padding: flex;
-    height:100px;
-    border-spacing: 10px;
-    vertical-align: middle;
+    display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 5%;
+  height: 50px;
+  max-height: 50px;
+  vertical-align: middle;
+  flex-shrink: 0; 
 }
+
+.inline2 > span{ 
+    display: inline-table;     
+  
+}
+
+.inline2 .antonio-Element{ 
+    width: 25px;
+    height: 25px;
+}
+
+.inline2 .antonio-Element1{ 
+    height: 25px;
+    width: calc(100% - 25px);
+}
+
+.inline2 .antonio-Element2{ 
+  width: 25px;
+  height: 25px;
+}
+
+.inline2 .antonio-Element3{ 
+    height: 25px;
+    width: calc(100% - 25px);
+}
+
 
 .inline3 { 
     display: inline-table;

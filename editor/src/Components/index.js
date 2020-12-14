@@ -1,7 +1,15 @@
 import fraction from "./Fraction";
 import matrix3x3 from "./Matrix3x3";
 import matrix2x2 from "./Matrix2x2";
-import antonioElement from "./AntonioElement"
+import antonioElement from "./AntonioElement/index"
+import antonioElement1 from "./AntonioElement/index copy 1"
+import antonioElement2 from "./AntonioElement/index copy 2"
+import antonioElement3 from "./AntonioElement/index copy 3"
+import antonioElement4 from "./AntonioElement/index copy 4"
+import antonioElement5 from "./AntonioElement/index copy 5"
+import antonioElement6 from "./AntonioElement/index copy 6"
+import antonioElement7 from "./AntonioElement/index copy 7"
+import antonioElement8 from "./AntonioElement/index copy 8"
 import numerator from "./Numerator";
 import denominator from "./Denominator";
 import integral from "./Integral";
@@ -769,6 +777,14 @@ export default {
   matrix2x2,
   matrix3x3,
   antonioElement,
+  antonioElement1,
+  antonioElement2,
+  antonioElement3,
+  antonioElement4,
+  antonioElement5,
+  antonioElement6,
+  antonioElement7,
+  antonioElement8,
   fraction,
   numerator,
   denominator,
