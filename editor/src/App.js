@@ -1,5 +1,4 @@
-import React, {Component, Fragment} from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import "./App.css";
 import { Editor, Transforms, Range, createEditor } from "slate";
 import { useMemo, useState, useCallback, useRef, useEffect } from "react";
@@ -7,8 +6,6 @@ import { Portal } from "./Portal";
 import { Slate, Editable, withReact, ReactEditor } from "slate-react";
 import components from "./Components";
 import simpleNumberLocalizer from 'react-widgets-simple-number';
-import NumberPicker from 'react-widgets/lib/NumberPicker';
-import NumberPickerContainer from "./Components/AntonioNumPicker"
 import MyForm from './Components/MatrixBar';
 import MatrixTable from './Components/AntonioTable'
 

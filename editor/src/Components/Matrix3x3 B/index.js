@@ -14,7 +14,7 @@ import "./index.css";
 const dom = () => [
   {
   type: "math",
-  subtype: "matrix3x3",
+  subtype: "matrix3x3B",
   children: [matrixElement.slateDOM(), matrixElement1.slateDOM(), matrixElement2.slateDOM(), matrixElement3.slateDOM(),matrixElement4.slateDOM(),
     matrixElement5.slateDOM(),matrixElement6.slateDOM(),matrixElement7.slateDOM(),matrixElement8.slateDOM(),],
 },
@@ -33,14 +33,21 @@ const dom = () => [
 
 
 const Element = (attributes, children) => {   
+  var Latex = require('react-latex');
   
   return (
     <span {...attributes}>
-
+      <span className = "inline" style={{ userSelect: "element" }} contentEditable={false}>  
+       <Latex displayMode={false}>{`$$ \\Biggr[ $$`}</Latex>
+      </span>
+      
       <span className = "inline2">
       {children}
      </span>
 
+      <span className= "inline3" style={{ userSelect: "element" }} contentEditable={false}>  
+        <Latex displayMode={false}>{`$$ \\Biggr] $$`}</Latex>
+      </span>
     </span>
 
     
@@ -52,11 +59,13 @@ const icon = (attributes, children) => {
   return (
     <span {...attributes}>
       <span>  <Latex displayMode={true}>{`$$
+    \\left[
     \\begin{array}{cc|c}
         \u2b1a & \u2b1a & \u2b1a \\\\
         \u2b1a & \u2b1a & \u2b1a \\\\
         \u2b1a & \u2b1a & \u2b1a \\\\
     \\end{array}
+    \\right]
   $$`}</Latex></span>
       {children}
     </span>

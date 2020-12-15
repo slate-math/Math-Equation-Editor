@@ -1,6 +1,8 @@
 import fraction from "./Fraction";
 import matrix3x3 from "./Matrix3x3";
 import matrix2x2 from "./Matrix2x2";
+import matrix3x3B from "./Matrix3x3 B";
+import matrix2x2B from "./Matrix2x2 B";
 import antonioElement from "./AntonioElement/index"
 import antonioElement1 from "./AntonioElement/index copy 1"
 import antonioElement2 from "./AntonioElement/index copy 2"
@@ -776,6 +778,8 @@ import mfrakC from "./Symbols/massSymbols/mfrakC/template";
 export default {
   matrix2x2,
   matrix3x3,
+  matrix2x2B,
+  matrix3x3B,
   antonioElement,
   antonioElement1,
   antonioElement2,

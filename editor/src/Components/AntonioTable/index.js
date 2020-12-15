@@ -1,35 +1,15 @@
 import React, { Fragment, useState, useRef, useEffect } from "react";
 // Material-ui imports
-import { fade, withStyles } from "@material-ui/core/styles";
+import {  withStyles } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
 import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
 import InputBase from "@material-ui/core/InputBase";
 import TextField from "@material-ui/core/TextField";
 import matrixElement from "../AntonioElement";
 
-
-const dom = (eq) => [
-  {
-  type: "math",
-  subtype: "matrix3x3",
-  children: [matrixElement.slateDOM(), ],
-},
-  {
-    children: [
-      {        
-        text: "",
-      },
-      {        
-        text: "",
-      },
-    ],
-  }
-];
 
 const useStyles = makeStyles({
   table: {

@@ -1,3 +1,6 @@
+.inline { 
+    display: inline-table;     
+}
 
 .inline2 { 
     flex-basis: 5%;
@@ -5,7 +8,11 @@
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;  
     grid-gap: 10px;
-    vertical-align: middle;
+    vertical-align: bottom;
     justify-content: center;
     row-gap: 2px;    
+}
+
+.inline3 { 
+    display: inline-table;
 }

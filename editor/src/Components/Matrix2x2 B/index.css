@@ -1,3 +1,7 @@
+.inline { 
+    display: inline-table;  
+    
+}
 
 .inline-2 { 
     flex-basis: 5%;
@@ -7,4 +11,8 @@
     grid-gap: 10px;
     vertical-align: middle;
     justify-content: center;
+}
+
+.inline3 { 
+    display: inline-table;
 }
